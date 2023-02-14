@@ -1,0 +1,26 @@
+[
+  {
+    "step": "Project planning & Brainstorming",
+    "description": "Defining project scope, goals, and resources. Identifying user needs and generating ideas.",
+    "deliveries": [
+      "Project Charter",
+      "Technical Charter",
+      "Business Focused Project Documentation"
+    ]
+  },
+  {
+    "step": "Development Cycle(s)",
+    "description": "Building and testing the software through iterative cycles including design, coding, testing, and debugging.",
+    "deliveries": []
+  },
+  {
+    "step": "Hand-Off",
+    "description": "Transferring ownership or responsibility for the software to the client or end users. Completing necessary documentation, training, and testing.",
+    "deliveries": []
+  },
+  {
+    "step": "Post Deploy Support",
+    "description": "Providing ongoing support and maintenance for the software after deployment. Troubleshooting, implementing updates, and providing user support.",
+    "deliveries": []
+  }
+]
