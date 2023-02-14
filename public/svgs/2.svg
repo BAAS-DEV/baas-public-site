@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3CC8B4;}
+	.st1{fill:#1EAA96;}
+	.st2{fill:#505050;}
+	.st3{fill:#3C3C3C;}
+	.st4{fill:#FAB400;}
+	.st5{fill:#DC9600;}
+	.st6{fill:#F0F0F0;}
+	.st7{fill:#D2D2D2;}
+	.st8{fill:#FA6450;}
+	.st9{fill:#DC4632;}
+	.st10{fill:#46AAD2;}
+	.st11{fill:#64C8F0;}
+	.st12{fill:#BE2814;}
+	.st13{fill:#BE7800;}
+	.st14{fill:#B4B4B4;}
+	.st15{fill:#288CB4;}
+	.st16{fill:#D2AA82;}
+	.st17{fill:#F0C8A0;}
+</style>
+<g>
+	<g>
+		<path class="st2" d="M58,20H42.382c-2.076,3.583-5.942,6-10.382,6s-8.306-2.417-10.382-6H6c-1.105,0-2,0.895-2,2v36
+			c0,1.105,0.895,2,2,2h52c1.105,0,2-0.895,2-2V22C60,20.895,59.105,20,58,20z"/>
+	</g>
+	<g>
+		<path class="st3" d="M8,58V22c0-1.105,0.895-2,2-2H6c-1.105,0-2,0.895-2,2v36c0,1.105,0.895,2,2,2h4C8.895,60,8,59.105,8,58z"/>
+	</g>
+	<g>
+		<circle class="st8" cx="32" cy="14" r="10"/>
+	</g>
+	<g>
+		<path class="st9" d="M24,14c0-5.185,3.947-9.448,9-9.95C32.671,4.018,32.338,4,32,4c-5.523,0-10,4.477-10,10
+			c0,5.523,4.477,10,10,10c0.338,0,0.671-0.018,1-0.05C27.947,23.448,24,19.185,24,14z"/>
+	</g>
+	<g>
+		<polygon class="st4" points="32,6 32,12 36,12 32,22 32,16 28,16 		"/>
+	</g>
+	<g>
+		<rect x="11" y="28" class="st3" width="2" height="24"/>
+	</g>
+	<g>
+		<path class="st4" d="M14,38h-4c-0.552,0-1-0.448-1-1l0,0c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1l0,0
+			C15,37.552,14.552,38,14,38z"/>
+	</g>
+	<g>
+		<rect x="21" y="28" class="st3" width="2" height="24"/>
+	</g>
+	<g>
+		<path class="st11" d="M24,46h-4c-0.552,0-1-0.448-1-1l0,0c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1l0,0
+			C25,45.552,24.552,46,24,46z"/>
+	</g>
+	<g>
+		<rect x="31" y="28" class="st3" width="2" height="24"/>
+	</g>
+	<g>
+		<path class="st4" d="M34,38h-4c-0.552,0-1-0.448-1-1l0,0c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1l0,0
+			C35,37.552,34.552,38,34,38z"/>
+	</g>
+	<g>
+		<rect x="41" y="28" class="st3" width="2" height="24"/>
+	</g>
+	<g>
+		<path class="st11" d="M44,42h-4c-0.552,0-1-0.448-1-1l0,0c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1l0,0
+			C45,41.552,44.552,42,44,42z"/>
+	</g>
+	<g>
+		<rect x="51" y="28" class="st3" width="2" height="24"/>
+	</g>
+	<g>
+		<path class="st4" d="M54,34h-4c-0.552,0-1-0.448-1-1l0,0c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1l0,0
+			C55,33.552,54.552,34,54,34z"/>
+	</g>
+</g>
+</svg>
