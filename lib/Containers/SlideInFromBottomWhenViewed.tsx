@@ -23,7 +23,7 @@ const Box = ({ num, animation }: any) => {
 
   return (
     <div
-      className="container"
+      className=""
       ref={ref}
       //   variants={boxVariant}
       //   initial="hidden"
@@ -42,7 +42,7 @@ const Box = ({ num, animation }: any) => {
             }}
             transition={{
               duration: 0.5,
-              delay: 1,
+              delay: 0.25,
               ease: animation,
             }}
           >

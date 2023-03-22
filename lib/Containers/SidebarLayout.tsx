@@ -1,21 +1,22 @@
 "use client";
 import useWindowDimensions from "../Hooks/windowHook";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 const links: Links[] = [
   {
     category: "Favorites",
     links: [
       {
         text: "Services",
-        path: "",
-      },
-      {
-        text: "About Us",
-        path: "",
+        path: "services",
       },
       {
         text: "Pricing",
-        path: "",
+        path: "pricing",
+      },
+      {
+        text: "Mock-Ups",
+        path: "mockups",
       },
     ],
   },
@@ -24,15 +25,11 @@ const links: Links[] = [
     links: [
       {
         text: "Web Services",
-        path: "/services/web",
+        path: "services/web",
       },
       {
         text: "Mobile Services",
-        path: "/services/mobile",
-      },
-      {
-        text: "FAQ",
-        path: "/faq",
+        path: "services/mobile",
       },
     ],
   },
@@ -54,25 +51,25 @@ export default function SidebarLayout({
 
   return (
     <div className="grid h-full grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 w-full min-h-screen pb-96">
-      <div className="col-span-2 py-8 ">
-        <div className="card w-full bg-base-100 shadow-xl px-4 py-4 ">
-          {children}
-        </div>
+      <div className="col-span-2">
+        <div className="card w-full px-4 py-4 ">{children}</div>
       </div>
       <div className="divider-vertical min-h-screen w-full col-span-1 mx-auto">
         <AboutComponent />
         <ImportantLinks />
-        <Posts />
+        {/* <Posts /> */}
       </div>
     </div>
   );
 }
 
 function AboutComponent() {
+  const router = useRouter();
+
   return (
     <div className="card w-full bg-base-100 shadow-xl image-full my-4">
       <figure>
-        <Image fill src="https://placeimg.com/400/225/arch" alt="Shoes" />
+        {/* <Image fill src="https://placeimg.com/400/225/arch" alt="Shoes" /> */}
       </figure>
       <div className="card-body">
         <h2 className="text-center mx-auto card-title text-white font-bold text-4xl">
@@ -80,7 +77,10 @@ function AboutComponent() {
         </h2>
         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
         <div className="card-actions justify-end">
-          <button className="btn btn-accent mt-4 text-white btn-lg btn-block">
+          <button
+            onClick={() => router.push("/contact")}
+            className="btn btn-accent mt-4 text-white btn-lg btn-block"
+          >
             Plan Your Project
           </button>
         </div>
@@ -90,6 +90,8 @@ function AboutComponent() {
 }
 
 function ImportantLinks() {
+  const router = useRouter();
+
   return (
     <>
       <div className="card w-full bg-base-300 shadow-xl mb-4">
@@ -104,7 +106,10 @@ function ImportantLinks() {
                 <ul>
                   {linkItem.links.map((subitem, k) => (
                     <>
-                      <li className="py-0.5">
+                      <li
+                        onClick={() => router.push("/" + subitem.path)}
+                        className="py-0.5"
+                      >
                         <a>{subitem.text}</a>
                       </li>
                     </>

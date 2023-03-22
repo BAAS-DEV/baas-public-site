@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <div className=" min-h-screen mx-auto bg-base-200 ">
       <PageSectionHeader
-        description="Articles that have been curated to document practices surrounding our operations and history."
+        description="A collection of à la carte services that we have successfully implemented for individuals or businesses"
         title="Services"
       />
       <div className="container mx-auto">{children}</div>

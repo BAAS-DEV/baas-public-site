@@ -14,88 +14,21 @@ let NavData: Navigation[] = [
     path: "/",
   },
   {
-    text: "About Us",
-    path: "/about",
-    subItems: [
-      {
-        text: "Who We Are",
-        path: "/about/about",
-      },
-      {
-        text: "How We Build Your Dreams",
-        path: "/about/how-we-build-your-software",
-      },
-    ],
+    text: "Articles",
+    path: "/articles",
   },
   {
     text: "Services",
     path: "/services",
-    subItems: [
-      // {
-      //   text: "Web",
-      //   path: "/services/web",
-      // },
-      // {
-      //   text: "Mobile",
-      //   path: "/services/mobile",
-      // },
-      // {
-      //   text: "DevOps",
-      //   path: "/services/devops",
-      // },
-      // {
-      //   text: "iOT",
-      //   path: "/services/iot",
-      // },
-      // {
-      //   text: "Automation & Scaling",
-      //   path: "/services/automation",
-      // },
-      // {
-      //   text: "Data Science & Analysis",
-      //   path: "/services/data",
-      // },
-      // {
-      //   text: "IAM & Security",
-      //   path: "/services/iam",
-      // },
-    ],
   },
-  // {
-  //   text: "Pick Your Industry",
-  //   path: "/industries",
-
-  //   subItems: [
-  //     {
-  //       text: "Residential",
-  //     },
-  //     {
-  //       text: "Education",
-  //     },
-  //     {
-  //       text: "Real Estate",
-  //     },
-  //     {
-  //       text: "Food & Hospitality",
-  //     },
-  //     {
-  //       text: "Media & Entertainment",
-  //     },
-  //     {
-  //       text: "E-Commerce",
-  //     },
-  //     {
-  //       text: "Expand Our List",
-  //     },
-  //   ],
-  // },
-  // {
-  //   text: "Ask Us A Question",
-  //   path: "/contact-us",
-  // },
   {
     text: "Pricing",
     path: "/pricing",
+  },
+
+  {
+    text: "Mockups",
+    path: "/mockups",
   },
   {
     text: "Contact Us",
@@ -120,7 +53,7 @@ export default function MainNav() {
     <div className="navbar bg-base-100 sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown dropdown-bottom">
-          <label tabIndex={0} className="btn btn-ghost ">
+          <label tabIndex={0} className="btn btn-ghost relative ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -135,7 +68,9 @@ export default function MainNav() {
                 d="M4 6h16M4 12h16M4 18h7"
               />
             </svg>
-            <p className="text-sm px-2">Menu</p>
+            <p className="text-sm px-2" style={{ marginBottom: 0! }}>
+              Menu
+            </p>
           </label>
           <ul
             tabIndex={0}
@@ -149,7 +84,7 @@ export default function MainNav() {
         <a className="btn btn-ghost normal-case text-4xl">BAAS</a>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
+        {/* <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -164,8 +99,29 @@ export default function MainNav() {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-        </button>
-        <button className="btn btn-ghost btn-circle">
+        </button> */}
+        {/* <div className="alert alert-info shadow-lg  w-72">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="stroke-current flex-shrink-0 w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>
+              Thank You For Viewing BAAS.dev{" "}
+              <span className="text-accent font-bold">v1.2</span>
+            </span>
+          </div>
+        </div> */}
+        {/* <button className="btn btn-ghost btn-circle">
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +139,7 @@ export default function MainNav() {
             </svg>
             <span className="badge badge-xs badge-primary indicator-item"></span>
           </div>
-        </button>
+        </button> */}
       </div>
     </div>
     // <div className="navbar bg-black z-10 sticky top-0 z-50">

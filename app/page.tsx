@@ -2,13 +2,13 @@ import MainHeroLanding from "../lib/Sections/MainHeroLanding";
 import ServicesAdvertisements from "../lib/Sections/ServicesAdvertisement";
 import BenefitsV2 from "../lib/Sections/BenefitsV2";
 import ContactUs from "../lib/Sections/ContactUs";
+import ImageHero from "../lib/Components/ImageHero/ImageHero";
+import SlantedDiv from "../lib/Sections/SlantedDiv";
 
 export default function Home() {
   return (
     <>
-      {/* <MainNav /> */}
-      {/* <CountDownHero /> */}
-      <section className="py-40 h-full w-full relative">
+      <div className="py-40 h-full w-full relative">
         <div
           className="absolute w-full h-full top-0 left-0 bg-cover bg-center opacity-80 bg-fixed"
           style={{
@@ -19,17 +19,13 @@ export default function Home() {
           <div className="h-full">
             <MainHeroLanding />
             <ServicesAdvertisements />
-
             <BenefitsV2 />
-
-            {/* <Services /> */}
+            <ImageHero />
+            <SlantedDiv />
             <ContactUs />
           </div>
         </div>
-      </section>
-      {/* <Benefits /> */}
-      {/* <Services /> */}
-      {/* <HowItWorks /> */}
+      </div>
     </>
   );
 }

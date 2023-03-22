@@ -1,14 +1,19 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function StepButtons(props: {
   pos: number;
   handleStepChange: (arg0: number) => void;
 }) {
+  const router = useRouter();
   console.log(props.pos);
   switch (props.pos) {
     case 0:
       return (
         <button
           onClick={(e) => props.handleStepChange(1)}
-          className="btn btn-lg btn-accent rounded-lg text-slate-200"
+          className="btn btn-lg btn-info rounded-lg text-slate-200"
         >
           Click Me!
         </button>
@@ -45,7 +50,7 @@ export default function StepButtons(props: {
           <br />
 
           <button
-            onClick={(e) => props.handleStepChange(-1)}
+            onClick={() => router.push("/contact")}
             value={1}
             className="btn btn-success btn-xl text-2xl mb-2 rounded-lg text-slate-200"
           >

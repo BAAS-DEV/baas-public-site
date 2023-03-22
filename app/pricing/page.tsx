@@ -15,6 +15,9 @@ export default function PricePage() {
   useEffect(() => {
     loadCategories();
     loadProducts();
+    // some browsers (like safari) may require a timeout to delay calling this
+    // function after a page has loaded; otherwise, it may not update the position
+    window.scrollTo(0, 0);
   }, []);
 
   const [categories, setCategories] = useState<ProductCategoryState[]>([]);
@@ -33,11 +36,14 @@ export default function PricePage() {
       });
 
     let newData: ProductCategoryState[] = [];
-    res.forEach((item, i) => {
-      newData.push({ ...item, checked: false });
-    });
+    if (res != null && res.length > 0) {
+      res.forEach((item, i) => {
+        newData.push({ ...item, checked: false });
+      });
+      setCategories(newData);
+    }
+
     console.log(newData);
-    setCategories(newData);
   };
 
   const loadProducts = async () => {
@@ -58,28 +64,26 @@ export default function PricePage() {
   };
   return (
     <>
-      <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 w-full py-8 gap-2">
+      <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 w-full gap-2">
         {categories.map((category, i) => (
           <>
             <div className="card mx-auto w-full hover:bg-base-300 hover:cursor-pointer">
               <Link href={`/pricing/` + category.attributes.Slug}>
-                <div className="card bg-base-100 shadow-xl">
+                <div className="card bg-base-100 px-4 h-96 sm:60 md:60 shadow-xl">
                   <figure className="px-10 pt-10">
-                    <img
+                    <Image
+                      loader={() => category.attributes.imageURL}
                       src={category.attributes.imageURL}
                       alt="Shoes"
-                      className="rounded-xl h-48"
+                      fill
+                      className="rounded-xl "
                     />
                   </figure>
-                  <div className="card-body items-center text-center">
-                    <h2 className="card-title text-2xl">
-                      {category.attributes.Name}
-                    </h2>
-                    {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
-                    {/* <div className="card-actions">
-                      <button className="btn btn-primary">Buy Now</button>
-                    </div> */}
-                  </div>
+                </div>
+                <div className="card-body py-2 items-center text-center w-full">
+                  <h2 className="card-title text-2xl text-left">
+                    {category.attributes.Name}
+                  </h2>
                 </div>
               </Link>
             </div>

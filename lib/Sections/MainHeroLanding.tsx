@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Code from "../Artboards/code";
 import Button1 from "../Buttons/Button1";
 import AnimatedContainer from "../Containers/AnimatedContainer";
@@ -6,6 +8,7 @@ import { ContainerConfig } from "../Containers/Container";
 import TypingTexts from "../TypographyCollections/TypingTexts";
 
 function HeroBody() {
+  const router = useRouter();
   return (
     <>
       <div className="w-full px-4 text-left mx-auto  ">
@@ -21,11 +24,14 @@ function HeroBody() {
                   width={350}
                 />
               </figure>
-              <h2 className="text-4xl text-white">
+              <h2 className="text-3xl font-thin text-white">
                 Don&#39;t Settle for the Standard
               </h2>
-              <div className=" text-center my-8 py-8">
-                <button className="btn btn-accent btn-lg rounded-lg text-center text-white">
+              <div className=" text-center my-8 ">
+                <button
+                  onClick={() => router.push("/contact")}
+                  className="btn btn-accent btn-lg rounded-lg text-center text-white"
+                >
                   FREE Consultation Signup
                 </button>{" "}
               </div>

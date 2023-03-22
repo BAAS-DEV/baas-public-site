@@ -4,7 +4,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import SLideInFromRightWhenViewed from "../Containers/SlideInFromRightWhenViewed ";
 import baasAxios from "../Utils/axios";
-
+import Image from "next/image";
+import Link from "next/link";
 interface ServiceLocalState {
   id: number;
   attributes: {
@@ -18,14 +19,17 @@ interface ServiceLocalState {
 
 function LeftSide() {
   return (
-    <div className="w-full text-center col-span-1 xs:col-span-1 sm:col-span-1 md:col-span-1 align-middle h-full sm:text-left md:text-center">
-      <div className="align-middle pt-96">
+    <div className="w-full  col-span-2  sm:col-span-2 md:col-span-1 h-full text-right sm:text-left md:text-center">
+      <div className="align-middle pt-36 w-full">
         <h1 className="text-6xl font-extrabold sm:text-5xl  ">
           We Go Above
           <strong className="block text-3xl font-extrabold text-accent ">
             In Every Category
           </strong>
         </h1>
+        <p className="font-thin">
+          Click on a service category to find out more
+        </p>
       </div>
 
       {/* 
@@ -46,22 +50,28 @@ function RightSide(props: { data: ServiceLocalState[] }) {
             {props.data.map((item, i) =>
               i % 2 == 0 ? (
                 <>
-                  <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-cover">
-                    <figure className="">
-                      {/* <img
-                        src={item.attributes.image}
-                        alt="Shoes"
-                        className="max-h-48"
-                      /> */}
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">{item.attributes.name}</h2>
-                      {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
-                      <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                  <Link href={"/services/" + item.attributes.slug}>
+                    <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-cover">
+                      <figure className=" rounded-xl">
+                        <Image
+                          loader={() => item.attributes.image}
+                          fill
+                          className="rounded-xl"
+                          src={`${item.attributes.image}`}
+                          alt="Shoes"
+                        />
+                      </figure>
+                      <div className="card-body">
+                        <h2 className="card-title text-xl">
+                          {item.attributes.name}
+                        </h2>
+                        {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
+                        <div className="card-actions justify-end">
+                          {/* <button className="btn btn-primary">Buy Now</button> */}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               ) : (
                 ""
@@ -72,22 +82,28 @@ function RightSide(props: { data: ServiceLocalState[] }) {
             {props.data.map((item, i) =>
               i % 2 != 0 ? (
                 <>
-                  <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-auto">
-                    <figure className="">
-                      {/* <img
-                        src={item.attributes.image}
-                        alt="Shoes"
-                        className="max-h-48 w-full"
-                      /> */}
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">{item.attributes.name}</h2>
-                      {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
-                      <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                  <Link href={"/services/" + item.attributes.slug}>
+                    <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-auto">
+                      <figure className=" rounded-xl">
+                        <Image
+                          loader={() => item.attributes.image}
+                          fill
+                          className="rounded-xl"
+                          src={`${item.attributes.image}`}
+                          alt="Shoes"
+                        />
+                      </figure>
+                      <div className="card-body">
+                        <h2 className="card-title text-xl">
+                          {item.attributes.name}
+                        </h2>
+                        {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
+                        <div className="card-actions justify-end">
+                          {/* <button className="btn btn-primary">Buy Now</button> */}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               ) : (
                 ""
@@ -122,12 +138,21 @@ export default function BenefitsV2() {
     },
   ];
   return (
-    <section className=" bg-center py-10 bg-white">
-      {/* <div className="absolute inset-0 bg-white/100 sm:bg-transparent bg-gradient-to-b from-white/100 to-black/20"></div> */}
+    <section className=" bg-center py-10 bg-white ">
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: `url("/images/stock/photo-1507358522600-9f71e620c44e.jpg")`,
+        }}
+      >
+        <div className="hero-content text-center ">
+          {/* <div className="absolute inset-0 bg-white/100 sm:bg-transparent bg-gradient-to-b from-white/100 to-black/20"></div> */}
 
-      <div className="grid grid-cols-2 mx-auto px-4 py-32 sm:px-6 gap-2 ">
-        <LeftSide />
-        <RightSide data={serviceData} />
+          <div className="grid grid-cols-2 mx-auto px-4 py-32 sm:px-6 gap-2 ">
+            <LeftSide />
+            <RightSide data={serviceData} />
+          </div>
+        </div>
       </div>
     </section>
   );

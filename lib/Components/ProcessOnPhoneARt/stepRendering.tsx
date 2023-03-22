@@ -17,7 +17,9 @@ export default function StepRendering(props: { step: number }) {
           <h2 className="card-title text-2xl text-white">
             {data[props.step].step}
           </h2>
-          <p className="text-md">{data[props.step].description}</p>
+          <p className="text-md text-white font-thin">
+            {data[props.step].description}
+          </p>
         </div>
       </div>
       {/* <div className="card w-full bg-info shadow-xl  px-2">

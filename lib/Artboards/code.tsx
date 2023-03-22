@@ -7,9 +7,11 @@ export default function Code() {
         <h1 className="text-4xl text-center">
           Custom Software Consultation & Development
         </h1>
-        <p className="text-center pt-4">
-          We build your dream, the way you want it.
-        </p>
+        <div className="text-center w-full text-2xl my-4">
+          Are You Ready To Start Your
+          <TypingTexts />
+          Project?
+        </div>
         <div className="divider"></div>
 
         <pre data-prefix=">" className="text">
@@ -28,11 +30,6 @@ export default function Code() {
           <code>SOLVE YOUR PROBLEMS</code>
         </pre>
         <div className="divider"></div>
-        <div className="text-center w-full text-2xl ">
-          Are You Ready To Start Your
-          <TypingTexts />
-          Project?
-        </div>
       </div>
     </div>
   );

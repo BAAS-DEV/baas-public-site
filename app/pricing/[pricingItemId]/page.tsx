@@ -20,6 +20,7 @@ export default function PricePage({
   useEffect(() => {
     // loadCategories();
     loadProducts();
+    window.scrollTo(0, 0);
   }, []);
 
   const [products, setProducts] = useState<Products[]>([]);

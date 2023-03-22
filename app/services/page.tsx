@@ -5,7 +5,7 @@ import Link from "next/link";
 import { title } from "process";
 import { useEffect, useState } from "react";
 import PageSectionHeader from "../../lib/Components/PageSectionHeader";
-import useWindowDimensions from "../../lib/Hooks/windowHook";
+import useWindowSize from "../../lib/Hooks/windowHook";
 import baasAxios from "../../lib/Utils/axios";
 
 interface ServiceLocalState {
@@ -23,7 +23,9 @@ interface ServiceLocalState {
 export default function Page() {
   useEffect(() => {
     loadCategories();
+    window.scrollTo(0, 0);
   }, []);
+  const size = useWindowSize();
 
   const [pageLocalState, setPageLocalState] = useState<ServiceLocalState[]>([]);
   // const { height, width } = useWindowDimensions();
@@ -53,7 +55,7 @@ export default function Page() {
     <>
       <section>
         <div className="grid grid-cols-1 mx-auto">
-          {typeof window !== undefined ? (
+          {size.width < 1366 ? (
             pageLocalState.map((item, i) => (
               <>
                 <div className="max-w-2xl my-8 text-center mx-auto">
@@ -127,8 +129,8 @@ const ImageAndText = (props: {
         <h1 className="text-5xl font-bold">{props.title}</h1>
         <p className="mb-4 line-clamp-3">{props.description}</p>
         <Link href={`/services/${props.slug ? props.slug : props.title}`}>
-          <button className="btn btn-accent btn-block btn-xl text-center text-3xl font-semibold text-white">
-            View Pricing
+          <button className="btn btn-info btn-block btn-xl text-center text-3xl font-semibold text-white">
+            View Services
           </button>
         </Link>
       </div>
@@ -150,8 +152,8 @@ const ImageAndTextSwitched = (props: {
           className="py-4"
           href={`/services/${props.slug ? props.slug : props.title}`}
         >
-          <button className="btn btn-accent btn-xl  btn-block text-center text-3xl font-semibold text-white">
-            View Pricing
+          <button className="btn btn-info btn-xl  btn-block text-center text-3xl font-semibold text-white">
+            View Services
           </button>
         </Link>
       </div>
