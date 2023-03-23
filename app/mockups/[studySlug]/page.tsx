@@ -19,7 +19,7 @@ interface ServiceLocalState {
         mockupType: string;
         image: string;
         Title: string;
-        Descriptions: string;
+        Description: string;
       }
     ];
     Description: string;
@@ -34,6 +34,7 @@ export default function Industries({
 }) {
   useEffect(() => {
     loadSystems();
+    window.scrollTo(0, 0);
   }, []);
 
   const [pageLocalState, setPageLocalState] = useState<ServiceLocalState[]>([]);
@@ -257,7 +258,7 @@ const GalleryModal = (props: { data: ServiceLocalState; index: number }) => {
                       {item.Title}
                     </div>
                     <div className="text-xl max-w-md mb-4 text-center mx-auto">
-                      {item.Descriptions}
+                      {item.Description}
                     </div>
 
                     <div className="w-full ">

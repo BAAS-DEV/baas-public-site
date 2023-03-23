@@ -45,13 +45,13 @@ function RightSide(props: { data: ServiceLocalState[] }) {
   return (
     <div className="col-span-2 xs:col-span-2 sm:col-span-2 md:col-span-1 gap-x-4">
       <SLideInFromRightWhenViewed animation={"easeInOut"}>
-        <div className="grid grid-cols-2 gap-2 w-full">
+        <div className="grid grid-cols-2 gap-2 w-full px-4">
           <div className="">
             {props.data.map((item, i) =>
               i % 2 == 0 ? (
                 <>
                   <Link href={"/services/" + item.attributes.slug}>
-                    <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-cover">
+                    <div className="card w-full my-4 bg-base-100 shadow-xl h-48 image-full bg-cover">
                       <figure className=" rounded-xl">
                         <Image
                           loader={() => item.attributes.image}
@@ -62,7 +62,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                         />
                       </figure>
                       <div className="card-body">
-                        <h2 className="card-title text-xl">
+                        <h2 className="card-title text-xl text-white">
                           {item.attributes.name}
                         </h2>
                         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
@@ -83,7 +83,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
               i % 2 != 0 ? (
                 <>
                   <Link href={"/services/" + item.attributes.slug}>
-                    <div className="card w-full my-4 bg-base-100 shadow-xl image-full bg-auto">
+                    <div className="card w-full my-4 bg-base-100 shadow-xl h-48 image-full bg-cover">
                       <figure className=" rounded-xl">
                         <Image
                           loader={() => item.attributes.image}
@@ -94,7 +94,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                         />
                       </figure>
                       <div className="card-body">
-                        <h2 className="card-title text-xl">
+                        <h2 className="card-title text-xl text-white">
                           {item.attributes.name}
                         </h2>
                         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}

@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 const baasAxios: AxiosInstance = axios.create({
-  baseURL: "http://localhost:1337/api",
+  baseURL: "https://api.baas.dev/api",
   timeout: 5000,
 });
 
