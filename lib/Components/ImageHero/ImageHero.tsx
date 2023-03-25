@@ -28,7 +28,7 @@ export default function ImageHero() {
           />
         </div>
         <div className="mr-4 w-full text-center mt-48  sm:text-left">
-          <h1 className="mb-6 text-3xl font-bold leading-tight dark:text-slate-50 md:text-4xl">
+          <h1 className="mb-6 text-3xl font-bold leading-tight md:text-4xl">
             We&#39;ve got{" "}
             <span className="text-success">tons of experince!</span>
           </h1>
