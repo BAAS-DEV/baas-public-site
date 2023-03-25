@@ -2,7 +2,7 @@
 // import CheckIcon from "~icons/tabler/check.tsx";
 
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 const benefits: string[] = [
   "Cross-Platform Apps",
   "Process & Automation Software",
@@ -22,10 +22,13 @@ export default function ImageHero() {
       </div> */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
-          <img
-            className="mask mx-auto w-full h-full max-h-screen"
-            style={{ width: "100%", height: "100%" }}
-            src="https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/e2ddf613-8996-4d8a-03fe-b1907e3a2200/public"
+          <Image
+            loader={() => "/svgs/mockupad.svg"}
+            src={"/svgs/mockupad.svg"}
+            alt="Shoes"
+            height={500}
+            width={500}
+            className="rounded-xl max-h-screen relative mx-auto"
           />
         </div>
         <div className="mr-4 w-full text-center mt-48  sm:text-left">
