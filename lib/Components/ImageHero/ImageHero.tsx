@@ -22,11 +22,15 @@ export default function ImageHero() {
       </div> */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
-          <img className="mask max-h-screen mx-auto" src="/svgs/mockupad.svg" />
+          <img
+            className="mask mx-auto w-full h-screen"
+            src="/svgs/mockupad.svg"
+          />
         </div>
         <div className="mr-4 w-full text-center mt-48  sm:text-left">
           <h1 className="mb-6 text-3xl font-bold leading-tight dark:text-slate-50 md:text-4xl">
-            Weve got <span className="text-success">tons of experince!</span>
+            We&#39;ve got{" "}
+            <span className="text-success">tons of experince!</span>
           </h1>
           <p className="mb-2 leading-relaxed text-slate-700 dark:text-slate-400">
             We have collected some examples of mockups produced for various
