@@ -12,7 +12,7 @@ export default function ContactUs() {
   const router = useRouter();
   return (
     <div>
-      <div className="flex justify-center items-center w-full h-screen sm:py-48">
+      <div className="flex justify-center items-center w-full h-screen sm:py-48 motion-reduce:b-32">
         <div className="container mx-auto my-4 px-4 lg:px-20">
           <div
             className="w-full p-20 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl bg-cover bg-no-repeat shadow-2xl"
@@ -146,7 +146,7 @@ export default function ContactUs() {
             </div> */}
           </div>
 
-          <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-12 ml-auto bg-black rounded-2xl  mb-16">
+          <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-12 ml-auto bg-black rounded-2xl  mb-32">
             <div className="flex flex-col text-white">
               <h1 className="font-bold uppercase text-4xl my-4">
                 24/7 Support
