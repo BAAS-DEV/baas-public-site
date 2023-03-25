@@ -25,7 +25,7 @@ export default function ImageHero() {
           <img
             className="mask mx-auto w-full h-full max-h-screen"
             style={{ width: "100%" }}
-            src="/svgs/mockupad.svg"
+            src="https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/e2ddf613-8996-4d8a-03fe-b1907e3a2200/public"
           />
         </div>
         <div className="mr-4 w-full text-center mt-48  sm:text-left">
