@@ -27,7 +27,7 @@ export default function ContactUs() {
                     </h3>
                     <button
                       onClick={() => router.push("/contact")}
-                      className="btn  text-white btn-4xl btn-success w-full text-2xl text-center
+                      className="btn  text-white btn-4xl btn-success w-full h-full max-h-36 text-2xl text-center
                   transition
                    hover:bg-orange-300
                     hover:text-slate-900
