@@ -23,7 +23,8 @@ export default function ImageHero() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
           <img
-            className="mask mx-auto w-full h-screen"
+            className="mask mx-auto w-full h-full max-h-screen"
+            style={{ width: "100%" }}
             src="/svgs/mockupad.svg"
           />
         </div>
