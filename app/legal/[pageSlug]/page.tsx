@@ -27,7 +27,9 @@ export default function PricePage({
       .catch((err) => console.log(err));
   };
 
-  <div>
-    <HTMLRender html={htmltext} />
-  </div>;
+  return (
+    <div>
+      <HTMLRender html={htmltext} />
+    </div>
+  );
 }

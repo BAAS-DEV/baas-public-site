@@ -54,6 +54,8 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.0",
+    "@types/react-google-recaptcha": "^2.1.5",
     "autoprefixer": "^10.4.13",
     "i": "^0.3.7",
     "postcss": "^8.4.19",
