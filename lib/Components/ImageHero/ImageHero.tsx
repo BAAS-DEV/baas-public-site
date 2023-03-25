@@ -24,7 +24,7 @@ export default function ImageHero() {
         <div className="w-full">
           <img
             className="mask mx-auto w-full h-full max-h-screen"
-            style={{ width: "100%" }}
+            style={{ width: "100%", height: "100%" }}
             src="https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/e2ddf613-8996-4d8a-03fe-b1907e3a2200/public"
           />
         </div>
