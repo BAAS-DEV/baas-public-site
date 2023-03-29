@@ -16,11 +16,7 @@ export default function PriceItem(props: {
         <>{"$" + props.selectedItem?.BasePrice}</>
       </p>
       <p className="mb-4 text-sm text-gray-500 dark:text-gray-300">
-        {/* {item.attributes.pricing.length > 0 ? (
-          <>{item.attributes.pricing[0].MeasurementUnit}</>
-        ) : (
-          <></>
-        )} */}
+        <>{"$" + props.selectedItem?.MeasurementUnit}</>
       </p>
       <span className="block w-full h-1 my-2 bg-gray-100 rounded-lg"></span>
     </>
