@@ -31,6 +31,7 @@ export default function ServicesListPage({
   useEffect(() => {
     FindAllServicesUnderCategory(params.serviceCategorySlug);
     FindServiceInformation(params.serviceCategorySlug);
+    window.scrollTo(0, 0);
   }, []);
 
   async function FindAllServicesUnderCategory(term: string) {

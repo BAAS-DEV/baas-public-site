@@ -23,8 +23,8 @@ export default function ImageHero() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
           <Image
-            loader={() => "/svgs/mockupad.svg"}
-            src={"/svgs/mockupad.svg"}
+            loader={() => "/png/ad2.png"}
+            src={"/png/ad2.png"}
             alt="Shoes"
             height={500}
             width={500}

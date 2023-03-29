@@ -10,6 +10,8 @@ import { useRouter } from "next/navigation";
 
 import ServicesSelection from "./ServicesSelection";
 import baasAxios from "../../Utils/axios";
+import Code from "../../Artboards/code";
+import TypingTexts from "../../TypographyCollections/TypingTexts";
 
 const schema = yup.object().shape({
   preferredName: yup.string().required(),
@@ -22,8 +24,8 @@ export default function ContactUsForm() {
     <>
       <div className=" mx-auto min-h-screen ">
         <div className="justify-center  ">
-          <div className="grid grid-cols-5 min-h-screen">
-            <div className="col-span-5 sm:col-span-5 md:col-span-3 lg:col-span-2">
+          <div className="grid grid-cols-5 min-h-screen container mx-auto max-w-6xl">
+            {/* <div className="col-span-5 sm:col-span-5 md:col-span-3 lg:col-span-2">
               <Image
                 loader={() => "/png/ad1.png"}
                 height={50}
@@ -32,13 +34,19 @@ export default function ContactUsForm() {
                 src={"/png/ad1.png"}
                 alt={""}
               />
-            </div>
-            <div className="w-full mt-24 col-span-5 sm:col-span-5 md:col-span-2 lg:col-span-3 mx-auto px-8">
+            </div> */}
+            <div className="w-full mt-24 col-span-5 mx-auto px-8">
               <h3 className="text-center">Thank You for Your Interest</h3>
               <p className="display text-center text-gray-500">
                 We are very grateful for you taking the time to send us a
                 message
               </p>
+
+              <div className="text-center w-full text-2xl my-4">
+                Are You Ready To Start Your
+                <TypingTexts />
+                Project?
+              </div>
               <hr className="mt-8" />
               <Form />
             </div>
@@ -132,7 +140,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="px-4 py-8 space-y-6">
       <div>
         <label
           htmlFor="preferredName"
