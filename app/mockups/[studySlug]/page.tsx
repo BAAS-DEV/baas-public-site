@@ -279,19 +279,20 @@ const GalleryModal = (props: {
           htmlFor={`my-modal-${props.index}`}
           className="modal cursor-pointer  "
         >
-          <label
-            className="modal-box relative max-w-3xl mx-auto h-screen"
-            htmlFor=""
-          >
-            <div className="h-full w-full py-8">
+          <label className="modal-box relative max-w-3xl mx-auto " htmlFor="">
+            <div
+              className="h-full w-full py-8 "
+              style={{ height: size.height * 0.75 }}
+            >
               <h2 className="text-4xl">{props.data.Title}</h2>
               <p className="text-4xl">{props.data.Description}</p>
               <Image
                 loader={() => props.data.image}
                 src={props.data.image}
                 alt={"image of" + props.data.Description}
-                fill
-                className="rounded-xl "
+                height={size.height}
+                width={size.width}
+                className="rounded-xl"
               />
             </div>
           </label>
