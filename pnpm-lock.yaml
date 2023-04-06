@@ -38,6 +38,7 @@ specifiers:
   react-move: ^6.5.0
   react-phone-number-input: ^3.2.17
   react-render-markup: ^3.5.0
+  react-responsive-carousel: ^3.2.23
   react-scroll-to-top: ^3.0.0
   react-time-ago: ^7.2.1
   react-type-animation: ^2.1.2
@@ -84,6 +85,7 @@ dependencies:
   react-move: 6.5.0_react@18.2.0
   react-phone-number-input: 3.2.17_biqbaboplfbrettd7655fr4n2y
   react-render-markup: 3.5.0_react@18.2.0
+  react-responsive-carousel: 3.2.23
   react-scroll-to-top: 3.0.0_react@18.2.0
   react-time-ago: 7.2.1_eqoz6kcnf5na464z2zfynejspu
   react-type-animation: 2.1.2_biqbaboplfbrettd7655fr4n2y
@@ -4884,6 +4886,13 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-easy-swipe/0.0.21:
+    resolution: {integrity: sha512-OeR2jAxdoqUMHIn/nS9fgreI5hSpgGoL5ezdal4+oO7YSSgJR8ga+PkYGJrSrJ9MKlPcQjMQXnketrD7WNmNsg==}
+    engines: {node: '>= 6'}
+    dependencies:
+      prop-types: 15.8.1
+    dev: false
+
   /react-google-recaptcha-v3/1.10.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-K3AYzSE0SasTn+XvV2tq+6YaxM+zQypk9rbCgG4OVUt7Rh4ze9basIKefoBz9sC0CNslJj9N1uwTTgRMJQbQJQ==}
     peerDependencies:
@@ -4998,6 +5007,14 @@ packages:
       - canvas
       - supports-color
       - utf-8-validate
+    dev: false
+
+  /react-responsive-carousel/3.2.23:
+    resolution: {integrity: sha512-pqJLsBaKHWJhw/ItODgbVoziR2z4lpcJg+YwmRlSk4rKH32VE633mAtZZ9kDXjy4wFO+pgUZmDKPsPe1fPmHCg==}
+    dependencies:
+      classnames: 2.3.2
+      prop-types: 15.8.1
+      react-easy-swipe: 0.0.21
     dev: false
 
   /react-scroll-to-top/3.0.0_react@18.2.0:

@@ -14,10 +14,12 @@ export default function RootLayout({
       <>
         <div
           className="absolute w-screen h-full top-0 left-0 bg-fixed  -z-10 "
-          style={{
-            height: size.trueHeight + 500,
-            backgroundImage: "url('/particles.svg')",
-          }}
+          style={
+            {
+              // height: size.height,
+              // backgroundImage: "url('/particles.svg')",
+            }
+          }
         ></div>
         <div className="mx-auto relative">{children}</div>
       </>

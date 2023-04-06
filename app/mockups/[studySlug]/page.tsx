@@ -38,7 +38,17 @@ export default function Industries({
   }, []);
 
   const [pageLocalState, setPageLocalState] = useState<ServiceLocalState[]>([]);
-
+  const [selectedMockup, setSelectedMockup] = useState<{
+    mockupType: string;
+    image: string;
+    Title: string;
+    Description: string;
+  }>({
+    mockupType: "",
+    Description: "",
+    image: "",
+    Title: "",
+  });
   const imageSizes = {
     phone: {
       height: 400,
@@ -70,11 +80,12 @@ export default function Industries({
     <>
       {pageLocalState.map((item, i) => (
         <>
-          <div className="relative container bg-none mx-auto">
-            <GalleryModal data={item} index={i} />
+          <div className="relative container  mx-auto">
+            <GalleryModal data={selectedMockup} index={i} />
+
             <div className="hero min-h-screen mx-auto  w-full">
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
-              <div className="hero-content text-center text-neutral-content">
+              <div className="hero-content text-center text-primary">
                 <div className="grid grid-cols-2 gap-8 ">
                   {i % 2 === 0 ? (
                     <>
@@ -133,18 +144,24 @@ export default function Industries({
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         <div>
                           <div className="max-w-md text-left pt-20 sm:pt-20 md:pt-48">
-                            <h1 className="mb-5 text-5xl text-white font-bold">
+                            <h1 className="mb-5 text-5xl font-bold">
                               {item.attributes.Title}
                             </h1>
                             <p className="mb-5">
                               {item.attributes.Description}
                             </p>
-                            <label
-                              htmlFor={`my-modal-${i}`}
-                              className="btn btn-accent"
-                            >
-                              View Gallery
-                            </label>
+                            {item.attributes.DisplayMockup.map((sub, i) => (
+                              <>
+                                {" "}
+                                <label
+                                  htmlFor={`my-modal-${i}`}
+                                  className="btn btn-accent mt-4"
+                                  onClick={() => setSelectedMockup(sub)}
+                                >
+                                  {sub.Title}
+                                </label>
+                              </>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -156,18 +173,24 @@ export default function Industries({
                         {" "}
                         <div>
                           <div className="max-w-md text-right float-right pt-20 sm:pt-20 md:pt-48">
-                            <h1 className="mb-5 text-5xl text-white font-bold">
+                            <h1 className="mb-5 text-5xl  font-bold">
                               {item.attributes.Title}
                             </h1>
                             <p className="mb-5">
                               {item.attributes.Description}
                             </p>
-                            <label
-                              htmlFor={`my-modal-${i}`}
-                              className="btn btn-accent"
-                            >
-                              View Gallery
-                            </label>
+                            {item.attributes.DisplayMockup.map((sub, i) => (
+                              <>
+                                {" "}
+                                <label
+                                  htmlFor={`my-modal-${i}`}
+                                  className="btn btn-accent mt-4"
+                                  onClick={() => setSelectedMockup(sub)}
+                                >
+                                  {sub.Title}
+                                </label>
+                              </>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -231,8 +254,18 @@ export default function Industries({
   );
 }
 
-const GalleryModal = (props: { data: ServiceLocalState; index: number }) => {
+const GalleryModal = (props: {
+  data: {
+    mockupType: string;
+    image: string;
+    Title: string;
+    Description: string;
+  };
+  index: number;
+}) => {
   console.log(props);
+  const size = useWindowSize();
+
   return (
     <>
       {/* Put this part before </body> tag */}
@@ -246,41 +279,20 @@ const GalleryModal = (props: { data: ServiceLocalState; index: number }) => {
           htmlFor={`my-modal-${props.index}`}
           className="modal cursor-pointer  "
         >
-          <label className="modal-box relative max-w-5xl mx-auto" htmlFor="">
-            <div className="carousel">
-              {props.data.attributes.DisplayMockup.map((item, i) => (
-                <>
-                  <div
-                    id={`item${i + 1}`}
-                    className="carousel-item w-full mx-auto text-center grid grid-cols-1"
-                  >
-                    <div className="text-4xl font-semibold max-w-md text-center mx-auto">
-                      {item.Title}
-                    </div>
-                    <div className="text-xl max-w-md mb-4 text-center mx-auto">
-                      {item.Description}
-                    </div>
-
-                    <div className="w-full ">
-                      <img
-                        src={item.image}
-                        className="mx-auto image-full"
-                        style={{ maxHeight: innerWidth < 400 ? 300 : 550 }}
-                      />
-                    </div>
-                  </div>
-                </>
-              ))}
-            </div>
-            <div className="flex justify-center w-full py-2 gap-2">
-              {Array.from(
-                Array(props.data.attributes.DisplayMockup.length),
-                (e, i) => (
-                  <a key={i} href={`#item${i + 1}`} className="btn btn-xs">
-                    {i + 1}
-                  </a>
-                )
-              )}
+          <label
+            className="modal-box relative max-w-3xl mx-auto h-screen"
+            htmlFor=""
+          >
+            <div className="h-full w-full py-8">
+              <h2 className="text-4xl">{props.data.Title}</h2>
+              <p className="text-4xl">{props.data.Description}</p>
+              <Image
+                loader={() => props.data.image}
+                src={props.data.image}
+                alt={"image of" + props.data.Description}
+                fill
+                className="rounded-xl "
+              />
             </div>
           </label>
         </label>
