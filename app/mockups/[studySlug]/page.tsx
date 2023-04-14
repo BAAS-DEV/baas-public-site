@@ -86,11 +86,11 @@ export default function Industries({
                 <GalleryModal data={selectedMockup} index={j.toString()} />
               ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
-              <div className="hero-content text-center text-primary">
-                <div className="grid grid-cols-2 gap-8 ">
+              <div className="hero-content w-full text-center text-primary">
+                <div className="grid grid-cols-3 w-full gap-8 ">
                   {i % 2 === 0 ? (
                     <>
-                      <div className="col-span-2 sm:col-span-2 md:col-span-1">
+                      <div className="col-span-2 sm:col-span-3 md:col-span-1">
                         <>
                           <>
                             <SlideInFromLeftWhenViewed animation={"easeIn"}>
