@@ -153,9 +153,8 @@ export default function Industries({
                             </p>
                             {item.attributes.DisplayMockup.map((sub, j) => (
                               <>
-                                <GalleryModal data={selectedMockup} index={j} />
                                 <label
-                                  htmlFor={`my-modal-${i}`}
+                                  htmlFor={`my-modal-${j}`}
                                   className="btn btn-accent mt-4"
                                   onClick={() => setSelectedMockup(sub)}
                                 >
@@ -261,9 +260,9 @@ const GalleryModal = (props: {
     Title: string;
     Description: string;
   };
-  index: number;
+  index: string;
 }) => {
-  console.log(props);
+  console.log(props.index);
   const size = useWindowSize();
 
   return (
