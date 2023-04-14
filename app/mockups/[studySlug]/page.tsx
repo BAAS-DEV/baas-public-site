@@ -81,9 +81,10 @@ export default function Industries({
       {pageLocalState.map((item, i) => (
         <>
           <div className="relative container  mx-auto">
-            <GalleryModal data={selectedMockup} index={i} />
-
             <div className="hero min-h-screen mx-auto  w-full">
+              {item.attributes.DisplayMockup.map((subitem, j) => (
+                <GalleryModal data={selectedMockup} index={j} />
+              ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
               <div className="hero-content text-center text-primary">
                 <div className="grid grid-cols-2 gap-8 ">
@@ -150,9 +151,9 @@ export default function Industries({
                             <p className="mb-5">
                               {item.attributes.Description}
                             </p>
-                            {item.attributes.DisplayMockup.map((sub, i) => (
+                            {item.attributes.DisplayMockup.map((sub, j) => (
                               <>
-                                {" "}
+                                <GalleryModal data={selectedMockup} index={j} />
                                 <label
                                   htmlFor={`my-modal-${i}`}
                                   className="btn btn-accent mt-4"
@@ -181,7 +182,6 @@ export default function Industries({
                             </p>
                             {item.attributes.DisplayMockup.map((sub, i) => (
                               <>
-                                {" "}
                                 <label
                                   htmlFor={`my-modal-${i}`}
                                   className="btn btn-accent mt-4"
