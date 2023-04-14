@@ -83,7 +83,7 @@ export default function Industries({
           <div className="relative container  mx-auto">
             <div className="hero min-h-screen mx-auto  w-full">
               {item.attributes.DisplayMockup.map((subitem, j) => (
-                <GalleryModal data={selectedMockup} index={j} />
+                <GalleryModal data={selectedMockup} index={j.toString()} />
               ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
               <div className="hero-content text-center text-primary">
