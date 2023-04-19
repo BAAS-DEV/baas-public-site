@@ -19,12 +19,12 @@ export default function FeaturedArticle(props: { article: Article }) {
               }
               height={50}
               width={50}
-              className={"w-full mx-auto h-full rounded-l-lg"}
+              className={"w-full mx-auto h-full rounded-lg"}
               src={props.article.imageURL ? props.article.imageURL : ""}
               alt={""}
             />
           </div>
-          <div className="w-full mt-40">
+          <div className="w-full mt-40 px-4">
             <h1 className="text-4xl font-bold pb-2">{props.article?.Title}</h1>
             <p>
               <span className="font-semibold">Last Updated: </span>
