@@ -68,3 +68,13 @@ export interface Products {
     pricing: PricingEntity[];
   };
 }
+
+export interface Article {
+  createdAt?: Date;
+  updatedAt?: Date;
+  Title?: string;
+  imageURL?: string;
+  Description?: string;
+  Featured?: boolean;
+  slug?: string;
+}

@@ -56,7 +56,7 @@ export default function Industries() {
           </div>
         </div>
       </div> */}
-      <div className="grid  container mx-auto xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 w-full gap-2 mb-96 mt-24 px-4">
+      <div className="grid  container mx-auto grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 w-full gap-2 mb-96 mt-24 px-4">
         {pageLocalState.map((item, i) => (
           <>
             {console.log(item.attributes.Image)}

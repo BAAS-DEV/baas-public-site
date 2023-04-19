@@ -32,7 +32,7 @@ export default function Page() {
 
   const loadCategories = async () => {
     let res = await baasAxios
-      .get("/service-categories")
+      .get("/service-categories?sort=name")
       .then((res) => {
         console.log(res.data);
         setPageLocalState(res.data.data);
@@ -58,7 +58,7 @@ export default function Page() {
           {size.width < 1366 ? (
             pageLocalState.map((item, i) => (
               <>
-                <div className="max-w-2xl my-8 text-center mx-auto">
+                <div className="max-w-2xl my-8 text-center mx-auto px-4">
                   <ImageAndText
                     title={item.attributes.name}
                     description={item.attributes.Description}

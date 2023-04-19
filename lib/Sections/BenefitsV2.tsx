@@ -51,7 +51,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
               i % 2 == 0 ? (
                 <>
                   <Link href={"/services/" + item.attributes.slug}>
-                    <div className="card w-full my-4 bg-base-100 shadow-xl h-48 image-full bg-cover">
+                    <div className="card  w-full my-4 bg-base-100 shadow-xl h-48 image-full bg-cover">
                       <figure className=" rounded-xl">
                         <Image
                           loader={() => item.attributes.image}
@@ -61,8 +61,8 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                           alt="Shoes"
                         />
                       </figure>
-                      <div className="card-body">
-                        <h2 className="card-title text-xl text-white">
+                      <div className="card-body py-4 px-4">
+                        <h2 className="card-title truncate text-xl text-white">
                           {item.attributes.name}
                         </h2>
                         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
@@ -93,7 +93,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                           alt="Shoes"
                         />
                       </figure>
-                      <div className="card-body">
+                      <div className="card-body py-4 px-4">
                         <h2 className="card-title text-xl text-white">
                           {item.attributes.name}
                         </h2>
@@ -148,7 +148,7 @@ export default function BenefitsV2() {
         <div className="hero-content text-center ">
           {/* <div className="absolute inset-0 bg-white/100 sm:bg-transparent bg-gradient-to-b from-white/100 to-black/20"></div> */}
 
-          <div className="grid grid-cols-2 mx-auto px-4 py-32 sm:px-6 gap-2 ">
+          <div className="grid grid-cols-2 mx-auto py-32  gap-2 ">
             <LeftSide />
             <RightSide data={serviceData} />
           </div>

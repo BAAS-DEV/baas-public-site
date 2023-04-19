@@ -22,13 +22,10 @@ export default function ImageHero() {
       </div> */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
-          <Image
-            loader={() => "/png/ad2.png"}
+          <img
             src={"/png/ad2.png"}
             alt="Shoes"
-            height={500}
-            width={500}
-            className="rounded-xl max-h-screen relative mx-auto"
+            className="rounded-xl max-h-screen relative mx-auto md:float-right mr-4 min-h-screen"
           />
         </div>
         <div className="mr-4 w-full text-center mt-48  sm:text-left">

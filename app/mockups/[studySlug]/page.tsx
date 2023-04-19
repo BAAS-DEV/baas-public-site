@@ -80,17 +80,17 @@ export default function Industries({
     <>
       {pageLocalState.map((item, i) => (
         <>
-          <div className="relative container  mx-auto">
-            <div className="hero min-h-screen mx-auto  w-full">
+          <div className=" container  mx-auto">
+            <div className=" min-h-screen mx-auto  w-full">
               {item.attributes.DisplayMockup.map((subitem, j) => (
                 <GalleryModal data={selectedMockup} index={j.toString()} />
               ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
-              <div className="hero-content w-full text-center text-primary">
-                <div className="grid grid-cols-3 w-full gap-8 ">
+              <div className=" w-full text-center text-primary">
+                <div className="grid grid-cols-2 w-full  ">
                   {i % 2 === 0 ? (
                     <>
-                      <div className="col-span-2 sm:col-span-3 md:col-span-1">
+                      <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         <>
                           <>
                             <SlideInFromLeftWhenViewed animation={"easeIn"}>
@@ -100,7 +100,7 @@ export default function Industries({
                                     .mockupType === "web"
                                     ? "mockup-window"
                                     : "mockup-phone"
-                                } border mockup relative mx-auto`}
+                                } border mockup relative mx-auto float-right`}
                                 // style={{ height: size.width <= 960 ? 300 : 600 }}
                               >
                                 <div
@@ -144,7 +144,7 @@ export default function Industries({
                       </div>
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         <div>
-                          <div className="max-w-md text-left pt-20 sm:pt-20 md:pt-48">
+                          <div className="max-w-md px-8 text-left pt-20 sm:pt-20 md:pt-48">
                             <h1 className="mb-5 text-5xl font-bold">
                               {item.attributes.Title}
                             </h1>
@@ -160,6 +160,7 @@ export default function Industries({
                                 >
                                   {sub.Title}
                                 </label>
+                                <br />
                               </>
                             ))}
                           </div>
@@ -172,7 +173,7 @@ export default function Industries({
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         {" "}
                         <div>
-                          <div className="max-w-md text-right float-right pt-20 sm:pt-20 md:pt-48">
+                          <div className="max-w-md px-8 text-left md:text-right float-right pt-20 sm:pt-20 md:pt-48">
                             <h1 className="mb-5 text-5xl  font-bold">
                               {item.attributes.Title}
                             </h1>
@@ -181,13 +182,16 @@ export default function Industries({
                             </p>
                             {item.attributes.DisplayMockup.map((sub, i) => (
                               <>
-                                <label
-                                  htmlFor={`my-modal-${i}`}
-                                  className="btn btn-accent mt-4"
-                                  onClick={() => setSelectedMockup(sub)}
-                                >
-                                  {sub.Title}
-                                </label>
+                                <div className="">
+                                  <label
+                                    htmlFor={`my-modal-${i}`}
+                                    className="btn btn-accent mt-4"
+                                    onClick={() => setSelectedMockup(sub)}
+                                  >
+                                    {sub.Title}
+                                  </label>
+                                  <br />
+                                </div>
                               </>
                             ))}
                           </div>
@@ -202,7 +206,7 @@ export default function Industries({
                                 "web"
                                   ? "mockup-window"
                                   : "mockup-phone"
-                              } border mockup relative mx-auto`}
+                              } border mockup relative mx-auto float-left`}
                               // style={{ height: size.width <= 960 ? 300 : 600 }}
                             >
                               <div

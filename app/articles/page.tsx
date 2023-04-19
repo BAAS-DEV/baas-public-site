@@ -48,7 +48,7 @@ export default function Articles() {
       <div className="grid grid-cols-1 mt-24 gap-4 mb-24">
         {articles.map((item, i) => (
           <>
-            <div className={"mt-8"}>
+            <div className={"mt-8 px-4"}>
               <ArticleCard article={item} />
             </div>
           </>

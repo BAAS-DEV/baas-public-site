@@ -28,7 +28,7 @@ export default function Product(props: { item: Products }) {
 
           {selectedItem ? <BenfitsList item={selectedItem} /> : <></>}
 
-          <div className="grid grid-cols-4 w-full gap-2">
+          <div className="grid grid-cols-3 w-full gap-2">
             {props.item.attributes.pricing.length > 1 &&
               props.item.attributes.pricing.map((item, i) => (
                 <>
@@ -37,7 +37,7 @@ export default function Product(props: { item: Products }) {
                       onClick={() => {
                         handleSelectedItem(i);
                       }}
-                      className={`btn btn-primary w-full ${
+                      className={`btn btn-primary block w-full p-2 ${
                         selectedIndex === i ? "" : "btn-outline"
                       }`}
                     >

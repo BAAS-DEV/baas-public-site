@@ -4,6 +4,7 @@ import BenefitsV2 from "../lib/Sections/BenefitsV2";
 import ContactUs from "../lib/Sections/ContactUs";
 import ImageHero from "../lib/Components/ImageHero/ImageHero";
 import SlantedDiv from "../lib/Sections/SlantedDiv";
+import ArticlesHero from "../lib/Sections/ArticlesHero";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
           <div className="h-full">
             <MainHeroLanding />
             <ServicesAdvertisements />
+            <ArticlesHero />
+
             <BenefitsV2 />
             <ImageHero />
             <SlantedDiv />

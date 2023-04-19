@@ -13,9 +13,9 @@ export default function StepButtons(props: {
       return (
         <button
           onClick={(e) => props.handleStepChange(1)}
-          className="btn btn-lg btn-info rounded-lg text-slate-200"
+          className="btn btn-lg btn-accent rounded-lg text-slate-200"
         >
-          Click Me!
+          View Next Step
         </button>
       );
     case 1:
