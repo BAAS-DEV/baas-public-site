@@ -64,7 +64,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                       <div className="card-body py-4 px-4">
                         <h2
                           className="card-title  text-xl text-white"
-                          style={{ wordWrap: true }}
+                          style={{ wordWrap: "break-word" }}
                         >
                           {item.attributes.name}
                         </h2>
