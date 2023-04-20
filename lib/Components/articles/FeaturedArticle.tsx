@@ -24,7 +24,7 @@ export default function FeaturedArticle(props: { article: Article }) {
               alt={""}
             />
           </div>
-          <div className="w-full mt-40 px-4">
+          <div className="w-full md:mt-40 mt-16 px-4 mx-4">
             <h1 className="text-4xl font-bold pb-2">{props.article?.Title}</h1>
             <p>
               <span className="font-semibold">Last Updated: </span>
@@ -39,12 +39,14 @@ export default function FeaturedArticle(props: { article: Article }) {
             </p>
             <p className="text-md font-light">{props.article?.Description}</p>
             <Link
-              className="btn btn-accent mr-4"
+              className="btn btn-accent mr-4 mb-4"
               href={"/articles/" + props.article.slug}
             >
               Read Our Post
             </Link>
-            <button className="btn btn-info">View More Articles</button>
+            <Link className="btn btn-info" href={"/articles/"}>
+              More Articles
+            </Link>
           </div>
         </div>
       </div>

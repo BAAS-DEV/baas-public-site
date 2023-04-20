@@ -100,7 +100,7 @@ export default function Industries({
                                     .mockupType === "web"
                                     ? "mockup-window"
                                     : "mockup-phone"
-                                } border mockup relative mx-auto float-right`}
+                                } border mockup relative mx-auto my-20 md:float-right`}
                                 // style={{ height: size.width <= 960 ? 300 : 600 }}
                               >
                                 <div
@@ -144,7 +144,7 @@ export default function Industries({
                       </div>
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         <div>
-                          <div className="max-w-md px-8 text-left pt-20 sm:pt-20 md:pt-48">
+                          <div className="max-w-md px-4 md:text-left pt-20 sm:pt-20 md:pt-48">
                             <h1 className="mb-5 text-5xl font-bold">
                               {item.attributes.Title}
                             </h1>
@@ -173,7 +173,7 @@ export default function Industries({
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         {" "}
                         <div>
-                          <div className="max-w-md px-8 text-left md:text-right float-right pt-20 sm:pt-20 md:pt-48">
+                          <div className="max-w-md px-4 md:text-right md:float-right pt-20 sm:pt-20 md:pt-48">
                             <h1 className="mb-5 text-5xl  font-bold">
                               {item.attributes.Title}
                             </h1>
@@ -206,7 +206,7 @@ export default function Industries({
                                 "web"
                                   ? "mockup-window"
                                   : "mockup-phone"
-                              } border mockup relative mx-auto float-left`}
+                              } border mockup relative mx-auto my-20 md:float-left`}
                               // style={{ height: size.width <= 960 ? 300 : 600 }}
                             >
                               <div

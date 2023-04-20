@@ -27,8 +27,8 @@ let NavData: Navigation[] = [
   },
 
   {
-    text: "Mockups",
-    path: "/mockups",
+    text: "Projects",
+    path: "/projects",
   },
   {
     text: "Contact Us",

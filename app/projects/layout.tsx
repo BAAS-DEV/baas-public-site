@@ -13,8 +13,8 @@ export default function RootLayout({
   return (
     <>
       <PageSectionHeader
-        description="Packages of example components and products that we compile frequently"
-        title="Mockups"
+        description="Products, services, and concepts developed by our team."
+        title="Projects By BAAS"
       />
       <div className="mx-auto">{children}</div>
     </>

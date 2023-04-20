@@ -12,7 +12,7 @@ const benefits: string[] = [
 export default function ImageHero() {
   const router = useRouter();
   return (
-    <section className=" mx-auto bg-white text-center items-center px-8 py-36 sm:flex-row-reverse sm:px-12">
+    <section className=" mx-auto bg-white text-center items-center py-36 sm:flex-row-reverse ">
       {/* <div className="mb-8 w-full sm:mb-0 sm:w-1/2 sm:pl-4 md:pl-16">
         <img
           alt="Hanging out with friends"
@@ -28,7 +28,7 @@ export default function ImageHero() {
             className="rounded-xl max-h-screen relative mx-auto md:float-right mr-4 min-h-screen"
           />
         </div>
-        <div className="mr-4 w-full text-center mt-48  sm:text-left">
+        <div className="mr-4 w-full text-center mt-48 px-4 sm:text-left">
           <h1 className="mb-6 text-3xl font-bold leading-tight md:text-4xl">
             We&#39;ve got{" "}
             <span className="text-success">tons of experince!</span>

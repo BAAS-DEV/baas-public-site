@@ -12,9 +12,9 @@ export default function PageSectionHeader(props: PageSectionHeader) {
         <div className="hero rounded w-full mx-auto ">
           {/* <div className="hero-overlay bg-opacity-80"></div> */}
           <div className=" mb-0 w-full mx-auto bg-accent py-24 text-white shadow-xl rounded text-center ">
-            <h1 className="mb-5 text-5xl font-light"> {props.title}</h1>
+            <h1 className="mb-5 text-5xl "> {props.title}</h1>
             <SlideInFromBottomWhenViewed animation="easeIn">
-              <p className="mb-5 font-thin max-w-md mx-auto ">
+              <p className="mb-5 font-light max-w-md mx-auto ">
                 {props.description}
               </p>
             </SlideInFromBottomWhenViewed>

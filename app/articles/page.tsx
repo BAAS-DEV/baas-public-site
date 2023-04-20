@@ -31,7 +31,7 @@ export default function Articles() {
 
   const LoadArticles = async () => {
     let result = await baasAxios.get(
-      "/content-entries?filters[content_type][name][$eq]=Article&populate=*"
+      "content-entries?filters[content_type][name][$eq]=Article&sort=createdAt%3Adesc"
     );
 
     console.log(result.data);
@@ -42,7 +42,7 @@ export default function Articles() {
   return (
     <>
       <PageSectionHeader
-        description="Packages of example components and products that we compile frequently"
+        description="Content tailored for helping you understand technology, and how it can help you."
         title="Articles"
       />
       <div className="grid grid-cols-1 mt-24 gap-4 mb-24">
@@ -67,7 +67,7 @@ function ArticleCard(props: { article: Article }) {
         onClick={() =>
           router.push("/articles/" + props.article.attributes.Slug)
         }
-        className="flex py-4 flex-col hover:cursor-pointer rounded-lg bg-info text-white shadow-lg dark:bg-neutral-700 w-full px-8 max-w-2xl  md:flex-row"
+        className="flex flex-col hover:cursor-pointer rounded-lg bg-info text-white shadow-lg dark:bg-neutral-700 w-full  max-w-4xl  md:flex-row"
       >
         <img
           className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
