@@ -34,7 +34,7 @@ function RandomStrings(): string[] {
     "Human Resource",
     "Video Game",
     "AR/VR",
-    "iOT",
+    "IoT",
     "Security",
     "Identity Access Management",
     "Web3",
