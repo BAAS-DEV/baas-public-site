@@ -4,6 +4,19 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 const links: Links[] = [
   {
+    category: "Trending ",
+    links: [
+      {
+        text: "Web Services",
+        path: "services/web",
+      },
+      {
+        text: "Mobile Services",
+        path: "services/mobile",
+      },
+    ],
+  },
+  {
     category: "Favorites",
     links: [
       {
@@ -15,21 +28,8 @@ const links: Links[] = [
         path: "pricing",
       },
       {
-        text: "Mock-Ups",
-        path: "mockups",
-      },
-    ],
-  },
-  {
-    category: "Most Popular",
-    links: [
-      {
-        text: "Web Services",
-        path: "services/web",
-      },
-      {
-        text: "Mobile Services",
-        path: "services/mobile",
+        text: "Projects",
+        path: "/projects",
       },
     ],
   },
