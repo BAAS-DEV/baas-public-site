@@ -65,7 +65,7 @@ export default function ImageHero() {
           </ul>
           <div className="flex flex-col space-y-3 md:flex-row md:space-x-2 md:space-y-0">
             <button
-              onClick={() => router.push("/mockups")}
+              onClick={() => router.push("/projects")}
               className="rounded-lg text-xl border-0 bg-slate-900 px-6 py-3 text-white shadow-lg shadow-slate-300 transition hover:bg-orange-300 hover:text-slate-900 hover:shadow-orange-300 dark:bg-orange-300 dark:text-black dark:shadow-sm dark:shadow-orange-300 dark:hover:bg-orange-400 sm:py-2"
             >
               View Now

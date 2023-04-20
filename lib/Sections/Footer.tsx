@@ -21,7 +21,7 @@ export default function Footer() {
         </p>
       </div>
       <div>
-        <span className="footer-title">Services</span>
+        <span className="footer-title">Site Directory</span>
         <Link className="link link-hover" href={"/articles"}>
           Articles
         </Link>
@@ -31,8 +31,8 @@ export default function Footer() {
         <Link className="link link-hover" href={"/pricing"}>
           Pricing
         </Link>{" "}
-        <Link className="link link-hover" href={"/mockups"}>
-          Mockups
+        <Link className="link link-hover" href={"/projects"}>
+          Projects
         </Link>{" "}
         <Link className="link link-hover" href={"/contact"}>
           Contact

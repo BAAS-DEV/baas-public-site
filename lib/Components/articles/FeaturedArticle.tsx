@@ -13,18 +13,24 @@ export default function FeaturedArticle(props: { article: Article }) {
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="w-full">
-            <Image
-              loader={() =>
-                props.article.imageURL ? props.article.imageURL : ""
-              }
-              height={50}
-              width={50}
-              className={"w-full mx-auto h-full rounded-lg"}
-              src={props.article.imageURL ? props.article.imageURL : ""}
-              alt={""}
-            />
+            {props.article?.imageURL ? (
+              <>
+                <Image
+                  loader={() =>
+                    props.article.imageURL ? props.article.imageURL : ""
+                  }
+                  height={50}
+                  width={50}
+                  className={"w-full mx-auto h-full rounded-lg"}
+                  src={props.article.imageURL ? props.article.imageURL : ""}
+                  alt={""}
+                />
+              </>
+            ) : (
+              <></>
+            )}
           </div>
-          <div className="w-full md:mt-40 mt-16 px-4 mx-4">
+          <div className="w-full md:mt-40 mt-16 md:px-4">
             <h1 className="text-4xl font-bold pb-2">{props.article?.Title}</h1>
             <p>
               <span className="font-semibold">Last Updated: </span>

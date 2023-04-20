@@ -61,7 +61,7 @@ export default function Industries() {
           <>
             {console.log(item.attributes.Image)}
             <div className="card mx-auto w-full hover:bg-base-300 hover:cursor-pointer">
-              <Link href={`/mockups/${item.attributes.Title}`}>
+              <Link href={`/projects/${item.attributes.Title}`}>
                 <div className="card bg-base-100 px-4 h-72 sm:h-60 md:h-96 shadow-xl">
                   <figure className="px-10 pt-10">
                     <Image
