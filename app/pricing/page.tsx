@@ -64,10 +64,10 @@ export default function PricePage() {
   };
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 h-full w-full gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 h-full w-full gap-2 pb-48">
         {categories.map((category, i) => (
           <>
-            <div className="card mx-auto w-full px-2  hover:bg-base-300 hover:cursor-pointer">
+            <div className="card mx-auto w-full px-2 mb-8  hover:bg-base-300 hover:cursor-pointer">
               <Link href={`/pricing/` + category.attributes.Slug}>
                 <div className="card bg-base-100 px-4 h-96 lg:h-80   sm:60 md:60 shadow-xl">
                   <figure className="px-10 pt-10">
@@ -80,7 +80,7 @@ export default function PricePage() {
                     />
                   </figure>
                 </div>
-                <div className="card-body py-2 items-center text-center w-full">
+                <div className="card-body py-2  text-center w-full">
                   <h2 className="card-title text-2xl text-left">
                     {category.attributes.Name}
                   </h2>
