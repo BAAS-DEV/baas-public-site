@@ -33,6 +33,7 @@ specifiers:
   react-google-recaptcha: ^2.1.0
   react-google-recaptcha-v3: ^1.10.1
   react-hook-form: ^7.43.5
+  react-icons: ^4.8.0
   react-intersection-observer: ^9.4.1
   react-markdown: ^8.0.5
   react-move: ^6.5.0
@@ -80,6 +81,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-google-recaptcha-v3: 1.10.1_biqbaboplfbrettd7655fr4n2y
   react-hook-form: 7.43.5_react@18.2.0
+  react-icons: 4.8.0_react@18.2.0
   react-intersection-observer: 9.4.1_react@18.2.0
   react-markdown: 8.0.5_fan5qbzahqtxlm5dzefqlqx5ia
   react-move: 6.5.0_react@18.2.0
@@ -4919,6 +4921,14 @@ packages:
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-icons/4.8.0_react@18.2.0:
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
+    peerDependencies:
+      react: '*'
     dependencies:
       react: 18.2.0
     dev: false

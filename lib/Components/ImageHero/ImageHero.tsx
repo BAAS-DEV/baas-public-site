@@ -23,7 +23,9 @@ export default function ImageHero() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full">
           <img
-            src={"/png/ad2.png"}
+            src={
+              "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/308621c2-25cf-4715-94af-9d5ab4c85d00/public"
+            }
             alt="Shoes"
             className="rounded-xl max-h-screen relative mx-auto md:float-right mr-4 min-h-screen"
           />

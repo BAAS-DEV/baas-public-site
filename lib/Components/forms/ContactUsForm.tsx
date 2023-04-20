@@ -233,10 +233,10 @@ const Form = () => {
           about?
         </label>
         <div className="mt-2 space-y-4">
-          <div className="grid grid-cols-3 w-full">
+          <div className="grid grid-cols-2 w-full">
             {pageLocalState.map((item, i) => (
               <>
-                <div key={i} className="flex items-center">
+                <div key={i} className="flex items-center my-4">
                   <input
                     id={item.attributes.name}
                     name="interests"

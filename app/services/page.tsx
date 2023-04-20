@@ -126,10 +126,10 @@ const ImageAndText = (props: {
         />
       </div>
       <div>
-        <h1 className="text-5xl font-bold">{props.title}</h1>
-        <p className="mb-4 line-clamp-3">{props.description}</p>
+        <h1 className="text-2xl mb-2 font-bold">{props.title}</h1>
+        <p className="mb-4 text-lg line-clamp-3  mb-4">{props.description}</p>
         <Link href={`/services/${props.slug ? props.slug : props.title}`}>
-          <button className="btn btn-info btn-block btn-xl text-center text-3xl font-semibold text-white">
+          <button className="btn btn-info btn-block btn-xl text-center text-xl font-semibold text-white">
             View Services
           </button>
         </Link>
@@ -146,13 +146,13 @@ const ImageAndTextSwitched = (props: {
   return (
     <>
       <div>
-        <h1 className="text-5xl font-bold">{props.title}</h1>
-        <p className="mb-4 line-clamp-3">{props.description}</p>
+        <h1 className="text-2xl font-bold mb-2">{props.title}</h1>
+        <p className="line-clamp-3 text-lg mb-4">{props.description}</p>
         <Link
           className="py-4"
           href={`/services/${props.slug ? props.slug : props.title}`}
         >
-          <button className="btn btn-info btn-xl  btn-block text-center text-3xl font-semibold text-white">
+          <button className="btn btn-info btn-xl  btn-block text-center text-xl font-semibold text-white">
             View Services
           </button>
         </Link>

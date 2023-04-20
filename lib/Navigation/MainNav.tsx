@@ -6,6 +6,7 @@ import LinkButton from "./LinkButton";
 
 export interface Navigation {
   text: string;
+  icon?: string;
   path?: string;
   subItems?: Navigation[];
 }
@@ -13,27 +14,33 @@ export interface Navigation {
 let NavData: Navigation[] = [
   {
     text: "Home",
+    icon: "home",
     path: "/",
   },
   {
     text: "Articles",
+    icon: "articles",
     path: "/articles",
   },
   {
     text: "Services",
+    icon: "services",
     path: "/services",
   },
   {
     text: "Pricing",
+    icon: "pricing",
     path: "/pricing",
   },
 
   {
     text: "Projects",
+    icon: "projects",
     path: "/projects",
   },
   {
     text: "Contact Us",
+    icon: "contact",
     path: "/contact",
   },
 ];
@@ -45,7 +52,7 @@ export default function MainNav() {
         {data.map((item, i) =>
           item.subItems && item.subItems?.length > 0
             ? DrowndownButton(item)
-            : LinkButton(item.text, item.path ? item.path : "")
+            : LinkButton(item.text, item.path ? item.path : "", item.icon)
         )}
       </>
     );

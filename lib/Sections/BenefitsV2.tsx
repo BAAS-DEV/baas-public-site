@@ -62,7 +62,10 @@ function RightSide(props: { data: ServiceLocalState[] }) {
                         />
                       </figure>
                       <div className="card-body py-4 px-4">
-                        <h2 className="card-title truncate text-xl text-white">
+                        <h2
+                          className="card-title  text-xl text-white"
+                          style={{ wordWrap: true }}
+                        >
                           {item.attributes.name}
                         </h2>
                         {/* <p>If a dog chews shoes whose shoes does he choose?</p> */}
