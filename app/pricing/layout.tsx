@@ -19,7 +19,9 @@ export default function RootLayout({
         description="Transparent pricing and services related to projects we have completed under contract"
         title="Pricing"
       />
-      {size.width > 980 ? (
+      <div className="container mx-auto min-h-screen">{children}</div>
+
+      {/* {size.width > 980 ? (
         <SidebarLayout>
           {" "}
           <div className="container mx-auto">{children}</div>
@@ -28,7 +30,7 @@ export default function RootLayout({
         <>
           <div className="container mx-auto min-h-screen">{children}</div>
         </>
-      )}
+      )} */}
     </div>
   );
 }
