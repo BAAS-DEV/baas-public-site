@@ -76,5 +76,5 @@ export interface Article {
   imageURL?: string;
   Description?: string;
   Featured?: boolean;
-  slug?: string;
+  Slug?: string;
 }

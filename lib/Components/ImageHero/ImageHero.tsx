@@ -36,10 +36,9 @@ export default function ImageHero() {
             <span className="text-success">tons of experince!</span>
           </h1>
           <p className="mb-2 leading-relaxed text-slate-700 dark:text-slate-400">
-            We have collected some examples of mockups produced for various
-            projects.
+            We have collected some examples of projects produced by our team.
           </p>
-          <p className="mb-2 leading-relaxed text-slate-700 dark:text-slate-400">
+          <p className="mb-2 leading-relaxed text-slate-800 font-bold dark:text-slate-400">
             You can find example screenshots of:
           </p>
           <ul className="mb-8 flex flex-col items-center space-y-1 dark:text-slate-400 sm:items-start">

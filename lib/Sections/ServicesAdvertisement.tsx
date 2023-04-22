@@ -46,7 +46,7 @@ export default function ServicesAdvertisements() {
       className="hero   bg-white py-32"
       style={{ backgroundImage: "url('/dots.svg')" }}
     >
-      <div className="  grid grid-cols-2 w-full gap-8">
+      <div className=" px-2 grid grid-cols-2 w-full gap-8">
         <div className="col-span-2 sm:col-span-2 md:col-span-2 w-full text-center xs:mx-auto md:mx-0">
           <div className="mockup-phone phone-2 border-info text-center  px-4  ">
             <div className="camera"></div>

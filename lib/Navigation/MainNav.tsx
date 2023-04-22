@@ -93,12 +93,13 @@ export default function MainNav() {
             <li></li>
             <li>
               <div className="alert alert-info shadow-lg hover:text-black ">
-                <div>
-                  <button onClick={handleEmail}>
+                <button onClick={handleEmail}>
+                  <div>
                     <svg
                       width="25px"
                       height="25px"
                       viewBox="0 0 24 24"
+                      className="relative float-left"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -107,9 +108,11 @@ export default function MainNav() {
                         fill="#ffffff"
                       />
                     </svg>
-                  </button>
-                  <span className="text-white ">info@baas.dev</span>
-                </div>
+                    <span className="text-white float-right pl-2 pt-1 ">
+                      info@baas.dev
+                    </span>
+                  </div>
+                </button>
               </div>
               <span className="text-info font-bold">v1.0</span>
             </li>

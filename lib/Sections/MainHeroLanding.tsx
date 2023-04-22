@@ -11,8 +11,8 @@ function HeroBody() {
   const router = useRouter();
   return (
     <>
-      <div className="w-full px-4 text-left mx-auto  ">
-        <div className="px-4 grid grid-cols-2 ">
+      <div className="w-full px-2 text-left mx-auto  ">
+        <div className="grid grid-cols-2 ">
           <div className="text-center py-16 col-span-2 xs:col-span-2 sm:col-span-2 md:col-span-1">
             <div className="mx-auto text-center w-full">
               {/* <a className="btn btn-ghost normal-case text-xl">BAAS Software</a> */}

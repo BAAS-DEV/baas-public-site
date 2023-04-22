@@ -45,7 +45,7 @@ function RightSide(props: { data: ServiceLocalState[] }) {
   return (
     <div className="col-span-2 xs:col-span-2 sm:col-span-2 md:col-span-1 gap-x-4">
       <SLideInFromRightWhenViewed animation={"easeInOut"}>
-        <div className="grid grid-cols-2 gap-2 w-full px-4">
+        <div className="grid grid-cols-2 gap-2 w-full">
           <div className="">
             {props.data.map((item, i) =>
               i % 2 == 0 ? (

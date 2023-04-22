@@ -46,7 +46,7 @@ export default function FeaturedArticle(props: { article: Article }) {
             <p className="text-md font-light">{props.article?.Description}</p>
             <Link
               className="btn btn-accent mr-4 mb-4"
-              href={"/articles/" + props.article.slug}
+              href={"/articles/" + props.article.Slug}
             >
               Read Our Post
             </Link>
