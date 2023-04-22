@@ -9,7 +9,7 @@ export default function PriceItem(props: {
       <p className="text-3xl font-bold text-info dark:text-white">
         {props.data.attributes.Title}
       </p>
-      <p className="mb-4 mt-2 text-sm text-gray-500 dark:text-gray-300">
+      <p className="mb-4 mt-2 text-sm text-gray-700 dark:text-gray-300">
         {props.data.attributes.Description}
       </p>
       <p className="text-2xl mb-0 font-bold text-black dark:text-white">

@@ -67,21 +67,20 @@ export default function PricePage() {
       <div className="grid grid-cols-1 sm:grid-cols-1 px-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 h-full w-full gap-2 pb-48">
         {categories.map((category, i) => (
           <>
-            <div className="card mx-auto w-full bg-white hover:bg-gray-300 mb-8  hover:cursor-pointer">
+            <div className="card mx-auto w-full  bg-white hover:bg-gray-300 mb-8  hover:cursor-pointer">
               <Link href={`/pricing/` + category.attributes.Slug}>
-                <div className="card  h-80 lg:h-72 sm:60 md:60 shadow-xl">
-                  <figure className="p-0">
-                    <Image
-                      loader={() => category.attributes.imageURL}
-                      src={category.attributes.imageURL}
-                      alt={"picture of " + category.attributes.Name}
-                      fill
-                      className="rounded-t-xl"
-                    />
-                  </figure>
-                </div>
-                <div className="card-body py-4 text-center items-center w-full">
-                  <h2 className="card-title text-2xl text-center">
+                <figure className="p-0">
+                  <Image
+                    loader={() => category.attributes.imageURL}
+                    src={category.attributes.imageURL}
+                    alt={"picture of " + category.attributes.Name}
+                    width={50}
+                    height={50}
+                    className="rounded-t-lg h-full w-full"
+                  />
+                </figure>
+                <div className="card-body py-4 w-full ">
+                  <h2 className="card-title text-2xl text-primary text-center">
                     {category.attributes.Name}
                   </h2>
                   <p className="text-sm">{category.attributes.Description}</p>

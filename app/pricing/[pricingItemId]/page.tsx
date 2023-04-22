@@ -50,7 +50,7 @@ export default function PricePage({
   return (
     <div className="px-4 pb-48">
       <PricingNav />
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-3  ">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3  ">
         {products.map((item, i) => (
           <Product key={i} item={item} />
         ))}
@@ -63,8 +63,8 @@ function PricingNav() {
   return (
     <div className="dropdown dropdown-bottom w-full">
       <Link href={`/pricing`} className="">
-        <button className="btn btn-block text-2xl  mt-8 mb-4">
-          <p className="p-2"> {"<- Go Back To Pricing"}</p>
+        <button className="btn  text-2xl mb-4">
+          <p className="p-2 text-md text-white"> {"Back"}</p>
         </button>
       </Link>
     </div>
