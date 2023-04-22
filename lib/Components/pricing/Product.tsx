@@ -37,7 +37,7 @@ export default function Product(props: { item: Products }) {
                       onClick={() => {
                         handleSelectedItem(i);
                       }}
-                      className={`btn btn-primary block w-full p-2 ${
+                      className={`btn btn-primary text-xs block w-full p-2 ${
                         selectedIndex === i ? "" : "btn-outline"
                       }`}
                     >

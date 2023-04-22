@@ -32,7 +32,7 @@ export default function PricePage({
       .get(
         "/products?filters[product_category][slug][$eq]=" +
           params.pricingItemId +
-          "&populate=deep"
+          "&populate=deep&sort=Order"
       )
       .then((res) => {
         console.log("HE", res.data.data);
