@@ -42,7 +42,7 @@ const Box = ({ num, animation }: any) => {
             }}
             transition={{
               duration: 0.5,
-              delay: 0.25,
+              delay: 0,
               ease: animation,
             }}
           >

@@ -10,7 +10,7 @@ const Box = ({ num, animation }: any) => {
   const [ref, inView] = useInView({
     rootMargin: "0px 0px 0px 0px",
     triggerOnce: true,
-    delay: 500,
+    delay: 0,
   });
 
   useEffect(() => {
