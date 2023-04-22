@@ -64,7 +64,7 @@ export default function PricePage() {
   };
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 h-full w-full gap-2 pb-48">
+      <div className="grid grid-cols-1 sm:grid-cols-1 px-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 h-full w-full gap-2 pb-48">
         {categories.map((category, i) => (
           <>
             <div className="card mx-auto w-full bg-white hover:bg-gray-300 mb-8  hover:cursor-pointer">

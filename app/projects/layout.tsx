@@ -12,11 +12,13 @@ export default function RootLayout({
   const size = useWindowSize();
   return (
     <>
-      <PageSectionHeader
-        description="Products, services, and concepts developed by our team."
-        title="Projects By BAAS"
-      />
-      <div className="mx-auto">{children}</div>
+      <div className=" min-h-screen mx-auto bg-base-200 ">
+        <PageSectionHeader
+          description="Products, services, and concepts developed by our team."
+          title="Projects By BAAS"
+        />
+        <div className="mx-auto">{children}</div>
+      </div>
     </>
   );
 }

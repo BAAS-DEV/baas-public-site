@@ -56,27 +56,28 @@ export default function Industries() {
           </div>
         </div>
       </div> */}
-      <div className="grid  container mx-auto grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full gap-2 mb-96 mt-24 px-4">
+      <div className="grid  container mx-auto grid-cols-1 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full gap-2 pb-24 mt-24 px-4">
         {pageLocalState.map((item, i) => (
           <>
             {console.log(item.attributes.Image)}
-            <div className="card mx-auto w-full hover:bg-base-300 hover:cursor-pointer">
+            <div className="card mx-auto w-full mb-8 bg-white hover:bg-base-300 hover:cursor-pointer">
               <Link href={`/projects/${item.attributes.Title}`}>
-                <div className="card bg-base-100 px-4 h-72 sm:h-60 md:h-96 shadow-xl">
+                <div className="card bg-base-100  h-72 sm:h-60 md:h-96 shadow-xl">
                   <figure className="px-10 pt-10">
                     <Image
                       loader={() => item.attributes.Image}
                       src={item.attributes.Image}
                       alt="Shoes"
                       fill
-                      className="rounded-xl "
+                      className="rounded-t-xl "
                     />
                   </figure>
                 </div>
-                <div className="card-body py-2 items-center text-center w-full">
-                  <h2 className="card-title text-2xl text-left">
+                <div className="card-body py-4  w-full">
+                  <h2 className="card-title text-xl">
                     {item.attributes.Title}
                   </h2>
+                  <p className="text-sm">{item.attributes.Description}</p>
                 </div>
               </Link>
             </div>
