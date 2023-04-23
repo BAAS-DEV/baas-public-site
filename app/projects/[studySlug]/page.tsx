@@ -26,6 +26,18 @@ interface ServiceLocalState {
     slug?: string;
   };
 }
+
+interface Project {
+  id: number;
+  attributes: {
+    createdAt: Date;
+    updatedAt: Date;
+    Title: string;
+    Image: string;
+    Description: string;
+    Slug?: string;
+  };
+}
 export default function Industries({
   params,
 }: {
@@ -33,11 +45,13 @@ export default function Industries({
   children?: React.ReactNode;
 }) {
   useEffect(() => {
+    getProject();
     loadSystems();
     window.scrollTo(0, 0);
   }, []);
 
   const [pageLocalState, setPageLocalState] = useState<ServiceLocalState[]>([]);
+  const [project, setProject] = useState<Project>();
   const [selectedMockup, setSelectedMockup] = useState<{
     mockupType: string;
     image: string;
@@ -64,7 +78,7 @@ export default function Industries({
   const loadSystems = async () => {
     let res = await baasAxios
       .get(
-        "/system-components?populate=*&filters[system][Title][$eq]=" +
+        "/system-components?populate=*&filters[system][Slug][$eq]=" +
           params.studySlug
       )
       .then((res) => {
@@ -76,14 +90,65 @@ export default function Industries({
       .catch((err) => console.log(err));
   };
 
+  const getProject = async () => {
+    let res = await baasAxios
+      .get("/systems?filters[Slug][$eq]=" + params.studySlug)
+      .then((res) => {
+        console.log("data4", res.data.data[0]);
+        // setAllCategories(res.data.data);
+        // setCategoriesToAllSelected(res.data.data);
+        return res.data.data[0];
+      })
+      .catch((err) => console.log(err));
+
+    let result = res;
+    setProject(result);
+  };
+
   return (
     <>
+      <div className="container mx-auto">
+        <div className="py-16 px-8">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-2">
+            <div>
+              <Image
+                loader={() =>
+                  project?.attributes.Image ? project.attributes.Image : ""
+                }
+                height={50}
+                width={50}
+                className="rounded-xl w-full h-full"
+                src={project?.attributes.Image ? project.attributes.Image : ""}
+                alt="Shoes"
+              />
+            </div>
+            <div className="col-span-2 lg:col-span-1 px-4 my-auto">
+              <h1 className="text-2xl font-semibold">
+                {project?.attributes.Title}
+              </h1>
+
+              <SLideInFromRightWhenViewed animation="easeInOut">
+                <p className="py-6 text-lg font-thin ">
+                  {project?.attributes.Description}
+                </p>
+                {/* <button className="btn btn-primary">Get Started</button> */}
+              </SLideInFromRightWhenViewed>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="divider pt-16"></div>
+
       {pageLocalState.map((item, i) => (
         <>
           <div className=" container  mx-auto">
             <div className=" min-h-screen mx-auto  w-full">
               {item.attributes.DisplayMockup.map((subitem, j) => (
-                <GalleryModal data={selectedMockup} index={j.toString()} />
+                <GalleryModal
+                  key={j}
+                  data={selectedMockup}
+                  index={j.toString()}
+                />
               ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
               <div className=" w-full text-center text-primary">
@@ -144,7 +209,7 @@ export default function Industries({
                       </div>
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
                         <div>
-                          <div className="max-w-md px-4 md:text-left pt-20 sm:pt-20 md:pt-48">
+                          <div className="max-w-md px-4 md:text-left sm:pt-20 md:pt-48">
                             <h1 className="mb-5 text-5xl font-bold">
                               {item.attributes.Title}
                             </h1>
@@ -253,6 +318,34 @@ export default function Industries({
           </div>
         </>
       ))}
+      <div className="divider"></div>
+
+      <div className="container mx-auto">
+        <div className="hero min-h-screen bg-base-200">
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <h1 className="text-5xl font-bold">
+                Are you ready to build custom, just like these?
+              </h1>
+              <p className="py-6">
+                Take a look at some of the things we can do for you, and we are
+                certain we can benefit you in some way
+              </p>
+
+              <Link href={`/services`}>
+                <button className="btn btn-primary mx-1 text-white ">
+                  View Services
+                </button>
+              </Link>
+              <Link href={`/pricing`}>
+                <button className="btn btn-accent mx-1 text-white">
+                  View Pricing
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

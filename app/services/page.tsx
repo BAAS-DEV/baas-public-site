@@ -5,6 +5,7 @@ import Link from "next/link";
 import { title } from "process";
 import { useEffect, useState } from "react";
 import PageSectionHeader from "../../lib/Components/PageSectionHeader";
+import SlideInFromBottomWhenViewed from "../../lib/Containers/SlideInFromBottomWhenViewed";
 import useWindowSize from "../../lib/Hooks/windowHook";
 import baasAxios from "../../lib/Utils/axios";
 
@@ -32,7 +33,7 @@ export default function Page() {
 
   const loadCategories = async () => {
     let res = await baasAxios
-      .get("/service-categories?sort=name")
+      .get("/service-categories?sort=Order")
       .then((res) => {
         console.log(res.data);
         setPageLocalState(res.data.data);
@@ -125,15 +126,19 @@ const ImageAndText = (props: {
           className=" rounded-lg shadow-2xl max-h-96 w-full"
         />
       </div>
-      <div>
-        <h1 className="text-2xl mb-2 font-bold">{props.title}</h1>
-        <p className="mb-4 text-lg line-clamp-3  mb-4">{props.description}</p>
-        <Link href={`/services/${props.slug ? props.slug : props.title}`}>
-          <button className="btn btn-info btn-block btn-xl text-center text-xl font-semibold text-white">
-            View Services
-          </button>
-        </Link>
-      </div>
+      <SlideInFromBottomWhenViewed animation="easeInOut">
+        <div>
+          <h1 className="text-2xl mb-2 font-bold">{props.title}</h1>
+          <p className="mb-4 text-lg line-clamp-3 font-thin">
+            {props.description}
+          </p>
+          <Link href={`/services/${props.slug ? props.slug : props.title}`}>
+            <button className="btn btn-info btn-block btn-xl text-center text-xl font-semibold text-white">
+              View Services
+            </button>
+          </Link>
+        </div>
+      </SlideInFromBottomWhenViewed>
     </>
   );
 };
@@ -145,18 +150,20 @@ const ImageAndTextSwitched = (props: {
 }) => {
   return (
     <>
-      <div>
-        <h1 className="text-2xl font-bold mb-2">{props.title}</h1>
-        <p className="line-clamp-3 text-lg mb-4">{props.description}</p>
-        <Link
-          className="py-4"
-          href={`/services/${props.slug ? props.slug : props.title}`}
-        >
-          <button className="btn btn-info btn-xl  btn-block text-center text-xl font-semibold text-white">
-            View Services
-          </button>
-        </Link>
-      </div>
+      <SlideInFromBottomWhenViewed animation="easeInOut">
+        <div>
+          <h1 className="text-2xl font-bold mb-2">{props.title}</h1>
+          <p className="line-clamp-3 text-lg mb-4">{props.description}</p>
+          <Link
+            className="py-4"
+            href={`/services/${props.slug ? props.slug : props.title}`}
+          >
+            <button className="btn btn-info btn-xl  btn-block text-center text-xl font-semibold text-white">
+              View Services
+            </button>
+          </Link>
+        </div>
+      </SlideInFromBottomWhenViewed>
       <div className="my-8 mx-auto">
         <img src={props.img} className=" rounded-lg shadow-2xl max-h-96" />
       </div>

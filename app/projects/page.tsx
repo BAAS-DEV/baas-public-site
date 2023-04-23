@@ -18,14 +18,15 @@ export default function Industries() {
       Title: string;
       Image: string;
       Description: string;
-      slug?: string;
+      Slug?: string;
+      Order?: number;
     };
   }
   const [pageLocalState, setPageLocalState] = useState<ServiceLocalState[]>([]);
 
   const loadSystems = async () => {
     let res = await baasAxios
-      .get("/systems")
+      .get("/systems?sort=Order")
       .then((res) => {
         console.log(res.data);
         setPageLocalState(res.data.data);
@@ -61,7 +62,7 @@ export default function Industries() {
           <>
             {console.log(item.attributes.Image)}
             <div className="card mx-auto w-full mb-8 bg-white hover:bg-base-300 hover:cursor-pointer">
-              <Link href={`/projects/${item.attributes.Title}`}>
+              <Link href={`/projects/${item.attributes.Slug}`}>
                 <div className="card bg-base-100  h-72 sm:h-60 md:h-96 shadow-xl">
                   <figure className="px-10 pt-10">
                     <Image

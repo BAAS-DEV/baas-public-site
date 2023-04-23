@@ -8,7 +8,7 @@ const Box = ({ num, animation }: any) => {
   //   const control = useAnimation();
   const [entered, setEntered] = useState(false);
   const [ref, inView] = useInView({
-    rootMargin: "0px 0px 0px 0px",
+    rootMargin: "100px 0px 0px 0px",
     triggerOnce: true,
   });
 
@@ -42,7 +42,7 @@ const Box = ({ num, animation }: any) => {
             }}
             transition={{
               duration: 0.5,
-              delay: 0,
+              delay: 0.15,
               ease: animation,
             }}
           >
