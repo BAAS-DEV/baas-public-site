@@ -9,7 +9,7 @@ export default function Footer() {
           <img
             src="/baas-logo-white.png"
             className="mx-auto py-4"
-            alt="Shoes"
+            alt="BAAS Light Logo"
             width={150}
           />
         </figure>

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="mx-auto min-h-screen">{children}</div>
+      <div className="mx-auto  bg-base-200">{children}</div>
     </>
   );
 }

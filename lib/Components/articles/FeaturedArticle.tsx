@@ -11,7 +11,7 @@ export default function FeaturedArticle(props: { article: Article }) {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="w-full">
             {props.article?.imageURL ? (
               <>
@@ -30,7 +30,7 @@ export default function FeaturedArticle(props: { article: Article }) {
               <></>
             )}
           </div>
-          <div className="w-full md:mt-40 mt-16 md:px-4">
+          <div className="w-full mt-8 md:px-4">
             <h1 className="text-4xl font-bold pb-2">{props.article?.Title}</h1>
             <p>
               <span className="font-semibold">Last Updated: </span>

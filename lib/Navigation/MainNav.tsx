@@ -18,11 +18,6 @@ let NavData: Navigation[] = [
     path: "/",
   },
   {
-    text: "Articles",
-    icon: "articles",
-    path: "/articles",
-  },
-  {
     text: "Services",
     icon: "services",
     path: "/services",
@@ -37,6 +32,11 @@ let NavData: Navigation[] = [
     text: "Projects",
     icon: "projects",
     path: "/projects",
+  },
+  {
+    text: "Articles",
+    icon: "articles",
+    path: "/articles",
   },
   {
     text: "Contact Us",
@@ -114,7 +114,7 @@ export default function MainNav() {
                   </div>
                 </button>
               </div>
-              <span className="text-info font-bold">v1.0</span>
+              <span className="text-info font-bold">v1.02</span>
             </li>
           </ul>
         </div>

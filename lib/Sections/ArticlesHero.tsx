@@ -37,7 +37,7 @@ export default function ArticlesHero() {
               Here&#39;s What We&#39;ve Been Up To
             </h1>
             <p className="italic">
-              <i>Our News:</i>
+              <i>Our Pinned Article:</i>
             </p>
             {/* <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda

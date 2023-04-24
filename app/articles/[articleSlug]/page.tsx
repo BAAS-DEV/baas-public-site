@@ -43,7 +43,7 @@ export default function ArticleDetails({
           style={{ backgroundImage: "url('/svgs/rings.svg')" }}
         ></div>{" "}
         <div className="w-full  mb-8 px-8  max-w-4xl">
-          <h1 className="text-6xl mb-4 text-white">
+          <h1 className="text-4xl mb-4 text-white">
             {articles?.attributes.Title}
           </h1>
           <label className="text-white">Last Updated: </label>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 24px;
 }
 
@@ -15,15 +15,15 @@ p img {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 h4 {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 /* 

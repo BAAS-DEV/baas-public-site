@@ -46,7 +46,7 @@ export default function Articles() {
         description="Content tailored for helping you understand technology, and how it can help you."
         title="Articles"
       />
-      <div className="grid grid-cols-1 mt-24 gap-4 mb-24">
+      <div className="grid grid-cols-1 mt-24 gap-4 pb-32 ">
         {articles.map((item, i) => (
           <>
             <div className={"mt-8 px-4"}>
@@ -63,12 +63,12 @@ function ArticleCard(props: { article: Article }) {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center container mx-auto">
+    <div className="flex justify-center container mx-auto ">
       <div
         onClick={() =>
           router.push("/articles/" + props.article.attributes.Slug)
         }
-        className="grid grid-cols-9 hover:cursor-pointer rounded-lg bg-info text-white shadow-lg dark:bg-neutral-700 w-full  max-w-4xl  md:flex-row"
+        className="grid grid-cols-9 hover:cursor-pointer rounded-lg  shadow-lg dark:bg-neutral-700 w-full  max-w-4xl  md:flex-row"
       >
         <div className="col-span-9 md:col-span-4">
           <Image
@@ -77,18 +77,18 @@ function ArticleCard(props: { article: Article }) {
             alt={"picture of " + props.article.attributes.Title}
             width={50}
             height={50}
-            className="rounded-l-lg w-full h-full "
+            className=" w-full h-full  rounded-t-lg md:rounded-l-lg md:rounded-r-none "
           />
         </div>
-        <div className="col-span-9 md:col-span-5 p-4">
-          <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+        <div className="col-span-9 bg-white rounded-t-none rounded-b-lg md:rounded-l-none  card md:col-span-5 p-4">
+          <h5 className=" card-title text-xl mb-2 font-medium text-neutral-800 ">
             {props.article.attributes.Title}
           </h5>
-          <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+          <p className="px-0 card-body py-1 text-base font-light text-neutral-600 ">
             {props.article.attributes.Description}
           </p>
-          <p className="mb-4 text-base text-neutral-200 dark:text-neutral-200">
-            <label>Last Updated: </label>
+          <p className="card-actions mb-4 text-base text-neutral-200 ">
+            <label className="font-semibold">Last Updated: </label>
             <ReactTimeAgo
               date={props.article.attributes.updatedAt}
               locale="en-us"
