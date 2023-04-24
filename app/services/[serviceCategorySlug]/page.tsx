@@ -111,12 +111,10 @@ export default function ServicesListPage({
             />
           </div>
           <div className="col-span-2 lg:col-span-1 px-4 my-auto">
-            <h1 className="text-2xl font-semibold">
-              {service?.attributes.name}
-            </h1>
+            <h1 className="text-4xl font">{service?.attributes.name}</h1>
 
             <SLideInFromRightWhenViewed animation="easeInOut">
-              <p className="py-6 text-lg font-thin ">
+              <p className="py-6 text-xl font-thin ">
                 {service?.attributes.Description}
               </p>
               {/* <button className="btn btn-primary">Get Started</button> */}
@@ -127,7 +125,7 @@ export default function ServicesListPage({
       <div className="divider "></div>
 
       <div className="mx-auto w-full container py-4 px-2">
-        <h3 className="text-2xl font-bold mb-4">Example Services:</h3>
+        <h3 className="text-3xl font-bold mb-4">Example Services:</h3>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
           {data.map((item, i) => (
             <>
@@ -169,9 +167,9 @@ export default function ServicesListPage({
         <div className="container">
           <div className="hero min-h-screen bg-base-200">
             <div className="hero-content text-center">
-              <div className="max-w-md">
+              <div className="max-w-2xl">
                 <h1 className="text-5xl font-bold">
-                  Find the Perfect Plan for Your Business
+                  Find the Perfect Plan for You
                 </h1>
                 <p className="py-6">
                   We have priced out dozens of services with estimated budget

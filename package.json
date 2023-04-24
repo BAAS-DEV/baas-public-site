@@ -28,7 +28,7 @@
     "javascript-time-ago": "^2.5.9",
     "markdown-to-jsx": "^7.1.8",
     "marked": "^4.2.12",
-    "next": "13.0.3",
+    "next": "13.3.1",
     "react": "18.2.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-animation-on-scroll": "^5.1.0",

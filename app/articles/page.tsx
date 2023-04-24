@@ -8,6 +8,7 @@ import en from "javascript-time-ago/locale/en.json";
 
 import PageSectionHeader from "../../lib/Components/PageSectionHeader";
 import baasAxios from "../../lib/Utils/axios";
+import { Metadata } from "next";
 
 export interface Article {
   attributes: {

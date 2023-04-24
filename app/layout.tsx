@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import MainNav from "../lib/Navigation/MainNav";
 import Footer from "../lib/Sections/Footer";
 import "./globals.css";

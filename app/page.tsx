@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import MainHeroLanding from "../lib/Sections/MainHeroLanding";
 import ServicesAdvertisements from "../lib/Sections/ServicesAdvertisement";
 import BenefitsV2 from "../lib/Sections/BenefitsV2";
@@ -5,6 +7,18 @@ import ContactUs from "../lib/Sections/ContactUs";
 import ImageHero from "../lib/Components/ImageHero/ImageHero";
 import SlantedDiv from "../lib/Sections/SlantedDiv";
 import ArticlesHero from "../lib/Sections/ArticlesHero";
+
+export const metadata: Metadata = {
+  title: "Home | BAAS",
+  description: " Web, Mobile, & Custom Software Agency",
+  authors: { name: "BAAS Software Inc." },
+  robots: { index: true },
+  openGraph: {
+    images: [
+      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/5683665d-2cdd-499c-b282-b7d8549dd700/public",
+    ],
+  },
+};
 
 export default function Home() {
   return (

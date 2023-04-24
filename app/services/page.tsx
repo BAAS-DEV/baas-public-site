@@ -153,7 +153,9 @@ const ImageAndTextSwitched = (props: {
       <SlideInFromBottomWhenViewed animation="easeInOut">
         <div>
           <h1 className="text-2xl font-bold mb-2">{props.title}</h1>
-          <p className="line-clamp-3 text-lg mb-4">{props.description}</p>
+          <p className="mb-4 text-lg line-clamp-3 font-thin">
+            {props.description}
+          </p>
           <Link
             className="py-4"
             href={`/services/${props.slug ? props.slug : props.title}`}
