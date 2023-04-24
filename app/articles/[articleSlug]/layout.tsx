@@ -12,7 +12,8 @@ export async function generateMetadata({
   let result = await fetch(
     "https://api.baas.dev/api" +
       "/content-entries/?filters[slug][$eq]=" +
-      params?.articleSlug
+      params?.articleSlug,
+    { next: { revalidate: 10 } }
   ).then((res) => res.json());
 
   let data: Article = result.data[0].attributes;
