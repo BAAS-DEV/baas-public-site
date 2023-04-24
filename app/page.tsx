@@ -18,8 +18,13 @@ export const metadata: Metadata = {
     description: "Custom Software Development Agency",
     siteName: "BAAS.dev",
     images: [
-      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
+      {
+        url: "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
+        width: 1200,
+        height: 630,
+      },
     ],
+    tags: ["Custom Software", "Website Development", "Mobile App Development"],
   },
 };
 

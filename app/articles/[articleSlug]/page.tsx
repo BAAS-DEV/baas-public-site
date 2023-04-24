@@ -31,7 +31,6 @@ export default function ArticleDetails({
       "/content-entries/?filters[slug][$eq]=" + params?.articleSlug
     );
 
-    console.log(result.data);
     setArticles(result.data.data[0]);
   };
   const router = useRouter();
