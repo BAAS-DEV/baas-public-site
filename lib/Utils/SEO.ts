@@ -8,7 +8,7 @@ export interface DynamicPageSEOInput {
 }
 
 export default class SEO {
-  GenerateDynamicPageSEO(SEOInputData: DynamicPageSEOInput): Metadata {
+  GenerateSEO(SEOInputData: DynamicPageSEOInput): Metadata {
     return {
       title: SEOInputData.title + " | BAAS",
       description: SEOInputData.description,
