@@ -2,8 +2,9 @@ import { Metadata } from "next";
 // Dynamic metadata
 export async function generateMetadata({}) {
   return {
-    title: "Home | BAAS",
-    description: " Web, Mobile, & Custom Software Agency",
+    title: "Articles | BAAS",
+    description:
+      "Helpful articles for those interested in custom software development services",
     authors: { name: "BAAS Software Inc." },
     robots: { index: true },
     openGraph: {
