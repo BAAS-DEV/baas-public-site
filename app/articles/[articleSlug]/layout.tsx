@@ -5,10 +5,8 @@ import { Article } from "../../../lib/Interfaces";
 // Dynamic metadata
 export async function generateMetadata({
   params,
-  searchParams,
 }: {
   params: { articleSlug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   let result = await fetch(
     "https://api.baas.dev/api" +
