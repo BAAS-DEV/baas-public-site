@@ -7,26 +7,17 @@ import ContactUs from "../lib/Sections/ContactUs";
 import ImageHero from "../lib/Components/ImageHero/ImageHero";
 import SlantedDiv from "../lib/Sections/SlantedDiv";
 import ArticlesHero from "../lib/Sections/ArticlesHero";
+import SEO from "../lib/Utils/SEO";
 
-export const metadata: Metadata = {
-  title: "Home | BAAS",
-  description: "Client Focused, Quality - Custom Software Development Agency",
-  authors: { name: "BAAS Software Inc." },
-  robots: { index: true },
-  openGraph: {
-    title: "Home | BAAS",
-    description: "Custom Software Development Agency",
-    siteName: "BAAS.dev",
-    images: [
-      {
-        url: "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    tags: ["Custom Software", "Website Development", "Mobile App Development"],
-  },
-};
+let seo = new SEO();
+
+export const metadata: Metadata = seo.GenerateSEO({
+  title: "Home",
+  description: "Custom Software Development Agenc",
+  images:
+    "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
+  tags: [],
+});
 
 export default function Home() {
   return (
