@@ -10,7 +10,7 @@ export async function generateMetadata() {
     description:
       "Free articles that intend to help you build your dream solutions",
     images:
-      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
+      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/0e763bce-5ceb-4a9b-fcb9-dc6043dc0f00/public",
     tags: [],
   });
 }
