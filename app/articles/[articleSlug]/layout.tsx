@@ -20,8 +20,8 @@ export async function generateMetadata({
 
   return seo.GenerateSEO({
     title: data.Title ? data.Title : "Article",
-    description: data.imageURL
-      ? data.imageURL
+    description: data.Description
+      ? data.Description
       : "Helpful software development articles",
     images: data.imageURL ? data.imageURL : "Article By BAAS",
     tags: [],
