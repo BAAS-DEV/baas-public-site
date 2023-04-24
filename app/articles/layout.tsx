@@ -12,7 +12,7 @@ export async function generateMetadata({}) {
       description:
         "Helpful articles for those interested in custom software development services",
       images: [
-        "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/5683665d-2cdd-499c-b282-b7d8549dd700/public",
+        "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/0e763bce-5ceb-4a9b-fcb9-dc6043dc0f00/public",
       ],
     },
   };
