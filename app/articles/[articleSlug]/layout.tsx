@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import baasAxios from "../../../lib/Utils/axios";
 
 import { Article } from "../../../lib/Interfaces";
+import SEO from "../../../lib/Utils/SEO";
 // Dynamic metadata
 export async function generateMetadata({
   params,
@@ -14,21 +15,17 @@ export async function generateMetadata({
       params?.articleSlug
   ).then((res) => res.json());
 
-  console.log(result.data[0].attributes.Title);
   let data: Article = result.data[0].attributes;
+  const seo = new SEO();
 
-  return {
-    title: data.Title,
-    description: data.Description,
-    authors: { name: "BAAS Software Inc." },
-    robots: { index: true },
-    openGraph: {
-      title: data.Title,
-      description: data.Description,
-      images: data.imageURL,
-      tags: ["Software Development Articles"],
-    },
-  };
+  return seo.GenerateSEO({
+    title: data.Title ? data.Title : "Article",
+    description: data.imageURL
+      ? data.imageURL
+      : "Helpful software development articles",
+    images: data.imageURL ? data.imageURL : "Article By BAAS",
+    tags: [],
+  });
 }
 
 export default function RootLayout({

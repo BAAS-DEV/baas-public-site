@@ -1,27 +1,17 @@
 import { Metadata } from "next";
+import SEO from "../../lib/Utils/SEO";
 // Dynamic metadata
 
-export const metadata: Metadata = {
-  title: "Articles | BAAS",
+const seo = new SEO();
+
+export const metadata: Metadata = seo.GenerateSEO({
+  title: "Articles",
   description:
-    "Helpful articles aimed to inform readers about ways to maximize their software value",
-  authors: { name: "BAAS Software Inc." },
-  robots: { index: true },
-  openGraph: {
-    title: "Home | BAAS",
-    description:
-      "Helpful articles aimed to inform readers about ways to maximize their software value",
-    siteName: "BAAS.dev",
-    images: [
-      {
-        url: "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    tags: ["Custom Software Articles"],
-  },
-};
+    "Free articles that intend to help you build your dream solutions",
+  images:
+    "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
+  tags: [],
+});
 
 export default function RootLayout({
   children,
