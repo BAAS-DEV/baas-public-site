@@ -10,14 +10,15 @@ import ArticlesHero from "../lib/Sections/ArticlesHero";
 
 export const metadata: Metadata = {
   title: "Home | BAAS",
-  description: "Custom Software Development Agency",
+  description: "Client Focused, Quality - Custom Software Development Agency",
   authors: { name: "BAAS Software Inc." },
   robots: { index: true },
   openGraph: {
     title: "Home | BAAS",
     description: "Custom Software Development Agency",
+    siteName: "BAAS.dev",
     images: [
-      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/e1991de4-205c-4676-3d1b-629634ccdf00/public",
+      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
     ],
   },
 };
