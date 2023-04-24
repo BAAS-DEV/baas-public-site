@@ -6,9 +6,10 @@ import baasAxios from "../../../lib/Utils/axios";
 
 export default function PricePage({
   params,
+  searchParams,
 }: {
-  params?: any;
-  children?: React.ReactNode;
+  params: { articleSlug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     window.scrollTo(0, 0);

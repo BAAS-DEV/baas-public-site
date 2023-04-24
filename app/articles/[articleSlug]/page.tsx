@@ -13,9 +13,10 @@ import en from "javascript-time-ago/locale/en.json";
 
 export default function ArticleDetails({
   params,
+  searchParams,
 }: {
-  params?: any;
-  children?: React.ReactNode;
+  params: { articleSlug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     LoadArticles();

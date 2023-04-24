@@ -40,9 +40,10 @@ interface Project {
 }
 export default function Industries({
   params,
+  searchParams,
 }: {
-  params?: any;
-  children?: React.ReactNode;
+  params: { studySlug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     getProject();

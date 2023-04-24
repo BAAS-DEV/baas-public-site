@@ -16,9 +16,10 @@ import baasAxios from "../../../lib/Utils/axios";
 
 export default function PricePage({
   params,
+  searchParams,
 }: {
-  params?: any;
-  children?: React.ReactNode;
+  params: { pricingItemId: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     // loadCategories();

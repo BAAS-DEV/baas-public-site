@@ -1,17 +1,18 @@
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Articles | BAAS",
-  description:
-    "Helpful articles for those interested in how software development can help you.",
-  authors: { name: "BAAS Software Inc." },
-  robots: { index: true },
-  openGraph: {
-    images: [
-      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d230351b-5449-4257-6bc2-9c86cda7cc00/public",
-    ],
-  },
-};
+// Dynamic metadata
+export async function generateMetadata({}) {
+  return {
+    title: "Home | BAAS",
+    description: " Web, Mobile, & Custom Software Agency",
+    authors: { name: "BAAS Software Inc." },
+    robots: { index: true },
+    openGraph: {
+      images: [
+        "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/5683665d-2cdd-499c-b282-b7d8549dd700/public",
+      ],
+    },
+  };
+}
 
 export default function RootLayout({
   children,

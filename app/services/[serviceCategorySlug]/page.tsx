@@ -26,9 +26,10 @@ interface ServiceItems {
 
 export default function ServicesListPage({
   params,
+  searchParams,
 }: {
-  params?: any;
-  children?: React.ReactNode;
+  params: { serviceCategorySlug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     FindAllServicesUnderCategory(params.serviceCategorySlug);
