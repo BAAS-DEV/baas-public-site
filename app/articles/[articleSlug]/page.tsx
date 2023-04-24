@@ -15,8 +15,8 @@ export default function ArticleDetails({
   params,
   searchParams,
 }: {
-  params: { articleSlug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params?: { articleSlug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   useEffect(() => {
     LoadArticles();
@@ -28,7 +28,7 @@ export default function ArticleDetails({
 
   const LoadArticles = async () => {
     let result = await baasAxios.get(
-      "/content-entries/?filters[slug][$eq]=" + params.articleSlug
+      "/content-entries/?filters[slug][$eq]=" + params?.articleSlug
     );
 
     console.log(result.data);
