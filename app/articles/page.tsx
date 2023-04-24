@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ReactTimeAgo from "react-time-ago";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
-
+import Image from "next/image";
 import PageSectionHeader from "../../lib/Components/PageSectionHeader";
 import baasAxios from "../../lib/Utils/axios";
 import { Metadata } from "next";
@@ -68,14 +68,19 @@ function ArticleCard(props: { article: Article }) {
         onClick={() =>
           router.push("/articles/" + props.article.attributes.Slug)
         }
-        className="flex flex-col hover:cursor-pointer rounded-lg bg-info text-white shadow-lg dark:bg-neutral-700 w-full  max-w-4xl  md:flex-row"
+        className="grid grid-cols-9 hover:cursor-pointer rounded-lg bg-info text-white shadow-lg dark:bg-neutral-700 w-full  max-w-4xl  md:flex-row"
       >
-        <img
-          className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-          src={props.article.attributes.imageURL}
-          alt=""
-        />
-        <div className="flex flex-col justify-start p-6">
+        <div className="col-span-9 md:col-span-4">
+          <Image
+            loader={() => props.article.attributes.imageURL}
+            src={props.article.attributes.imageURL}
+            alt={"picture of " + props.article.attributes.Title}
+            width={50}
+            height={50}
+            className="rounded-l-lg w-full h-full "
+          />
+        </div>
+        <div className="col-span-9 md:col-span-5 p-4">
           <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
             {props.article.attributes.Title}
           </h5>

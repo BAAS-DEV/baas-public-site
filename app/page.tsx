@@ -13,10 +13,16 @@ let seo = new SEO();
 
 export const metadata: Metadata = seo.GenerateSEO({
   title: "Home",
-  description: "Custom Software Development Agenc",
+  description: "Build Your Custom Software Dream with BAAS",
   images:
     "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/d29dec25-872f-4fb6-a52d-83c6b355d500/public",
-  tags: [],
+  tags: [
+    "Custom Web Development",
+    "Custom software",
+    "Custom Website",
+    "custom web app",
+    "custom mobile app",
+  ],
 });
 
 export default function Home() {
