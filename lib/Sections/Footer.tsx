@@ -45,7 +45,7 @@ export default function Footer() {
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </div> */}
-      <div>
+      {/* <div>
         <span className="footer-title">Legal</span>
         <Link className="link link-hover" href={"/legal/terms-of-use"}>
           Terms of Use
@@ -53,7 +53,7 @@ export default function Footer() {
         <Link className="link link-hover" href={"/legal/cookies"}>
           Cookie Policy
         </Link>
-      </div>
+      </div> */}
     </footer>
   );
 }
