@@ -53,8 +53,6 @@ export default function Footer() {
         <Link className="link link-hover" href={"/legal/cookies"}>
           Cookie Policy
         </Link>
-        {/* <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a> */}
       </div>
     </footer>
   );
