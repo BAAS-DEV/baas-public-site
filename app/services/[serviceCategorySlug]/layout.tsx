@@ -9,13 +9,13 @@ export async function generateMetadata({
 }) {
   let result = await fetch(
     "https://api.baas.dev/api" +
-      "/services?filters[service_categories][slug][$eq]=" +
+      "/service-categories?filters[slug][$eq]=" +
       params.serviceCategorySlug,
 
     { next: { revalidate: 30 } }
   ).then((res) => res.json());
 
-  console.log(result);
+  console.log(result.data[0]);
   let data: Service = result.data[0];
   const seo = new SEO();
 
