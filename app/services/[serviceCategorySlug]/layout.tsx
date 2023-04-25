@@ -5,16 +5,17 @@ import SEO from "../../../lib/Utils/SEO";
 export async function generateMetadata({
   params,
 }: {
-  params: { studySlug: string };
+  params: { serviceCategorySlug: string };
 }) {
   let result = await fetch(
     "https://api.baas.dev/api" +
       "/services?filters[service_categories][slug][$eq]=" +
-      params.studySlug,
+      params.serviceCategorySlug,
 
     { next: { revalidate: 30 } }
   ).then((res) => res.json());
 
+  console.log(result);
   let data: Service = result.data[0];
   const seo = new SEO();
 
