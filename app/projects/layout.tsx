@@ -1,15 +1,24 @@
-"use client";
-
 import PageSectionHeader from "../../lib/Components/PageSectionHeader";
-import SidebarLayout from "../../lib/Containers/SidebarLayout";
-import useWindowSize from "../../lib/Hooks/windowHook";
-
+import SEO from "../../lib/Utils/SEO";
+export async function generateMetadata({
+  params,
+}: {
+  params: { articleSlug: string };
+}) {
+  const seo = new SEO();
+  return seo.GenerateSEO({
+    title: "Project By BAAS",
+    description: "Projects that we have preformed for our clients.",
+    images:
+      "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/db305228-eeee-44a3-6d03-948a4843de00/public",
+    tags: [],
+  });
+}
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const size = useWindowSize();
   return (
     <>
       <div className=" min-h-screen mx-auto bg-base-200 ">

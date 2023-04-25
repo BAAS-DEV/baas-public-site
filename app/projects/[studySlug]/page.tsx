@@ -7,6 +7,7 @@ import Image from "next/image";
 import useWindowSize from "../../../lib/Hooks/windowHook";
 import SLideInFromRightWhenViewed from "../../../lib/Containers/SlideInFromRightWhenViewed ";
 import SlideInFromLeftWhenViewed from "../../../lib/Containers/SlideInFromLeftWhenViewed";
+import { Project } from "../../../lib/Interfaces";
 
 interface ServiceLocalState {
   id: number;
@@ -27,17 +28,6 @@ interface ServiceLocalState {
   };
 }
 
-interface Project {
-  id: number;
-  attributes: {
-    createdAt: Date;
-    updatedAt: Date;
-    Title: string;
-    Image: string;
-    Description: string;
-    Slug?: string;
-  };
-}
 export default function Industries({
   params,
   searchParams,

@@ -78,3 +78,15 @@ export interface Article {
   Featured?: boolean;
   Slug?: string;
 }
+
+export interface Project {
+  id: number;
+  attributes: {
+    createdAt: Date;
+    updatedAt: Date;
+    Title: string;
+    Image: string;
+    Description: string;
+    Slug?: string;
+  };
+}
