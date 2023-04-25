@@ -18,7 +18,7 @@ export async function generateMetadata({
 
   return seo.GenerateSEO({
     title: data.attributes.Name
-      ? data.attributes.Name
+      ? data.attributes.Name + " Services Pricing"
       : "Pricing for Custom Software Services",
     description: data.attributes.Description
       ? data.attributes.Description
