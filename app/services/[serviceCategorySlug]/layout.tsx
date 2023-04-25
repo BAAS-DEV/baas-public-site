@@ -20,7 +20,9 @@ export async function generateMetadata({
   const seo = new SEO();
 
   return seo.GenerateSEO({
-    title: data.attributes.name ? data.attributes.name : "Serivce By BAAS",
+    title: data.attributes.name
+      ? data.attributes.name + " Services"
+      : "Serivce By BAAS",
     description: data.attributes.Description
       ? data.attributes.Description
       : "Projects that we have preformed for our clients.",
