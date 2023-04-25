@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import HTMLRender from "../../../lib/Components/HTML/HTMLRender";
 import baasAxios from "../../../lib/Utils/axios";
@@ -29,8 +31,12 @@ export default function PricePage({
   };
 
   return (
-    <div>
-      <HTMLRender html={htmltext} />
+    <div className="container mx-auto mt-28 mb-28 max-w-4xl w-full">
+      <div className="px-4">
+        {/* <ReactMarkdown remarkPlugins={[remarkGfm]}> */}
+        {/* {articles?.attributes.Content ? articles?.attributes.Content : ""} */}
+        {/* </ReactMarkdown> */}
+      </div>
     </div>
   );
 }

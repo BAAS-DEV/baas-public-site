@@ -4,16 +4,16 @@ import SEO from "../../../lib/Utils/SEO";
 export async function generateMetadata({
   params,
 }: {
-  params: { articleSlug: string };
+  params: { studySlug: string };
 }) {
   let result = await fetch(
     "https://api.baas.dev/api" +
-      "/system-components?populate=*&filters[system][Slug][$eq]=" +
-      params?.articleSlug,
+      "/systems?populate=*&filter[Slug][$eq]=" +
+      params?.studySlug,
     { next: { revalidate: 10 } }
   ).then((res) => res.json());
 
-  let data: Project = result.data[0].attributes;
+  let data: Project = result.data[0];
   const seo = new SEO();
 
   return seo.GenerateSEO({
@@ -24,6 +24,7 @@ export async function generateMetadata({
     images: data.attributes.Image ? data.attributes.Image : "Project Images",
     tags: [],
   });
+  return {};
 }
 export default function RootLayout({
   children,

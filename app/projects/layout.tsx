@@ -7,8 +7,9 @@ export async function generateMetadata({
 }) {
   const seo = new SEO();
   return seo.GenerateSEO({
-    title: "Project By BAAS",
-    description: "Projects that we have preformed for our clients.",
+    title: "Custom Software Projects By BAAS",
+    description:
+      "Web, Mobile, Automation, and more. Based projects that we have preformed for our clients.",
     images:
       "https://imagedelivery.net/6zvbH8ejfUWPqBF2dDyuGg/db305228-eeee-44a3-6d03-948a4843de00/public",
     tags: [],
