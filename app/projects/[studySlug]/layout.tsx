@@ -10,7 +10,7 @@ export async function generateMetadata({
     "https://api.baas.dev/api" +
       "/systems?populate=*&filter[Slug][$eq]=" +
       params?.studySlug,
-    { next: { revalidate: 10 } }
+    { next: { revalidate: 30 } }
   ).then((res) => res.json());
 
   let data: Project = result.data[0];
@@ -24,7 +24,6 @@ export async function generateMetadata({
     images: data.attributes.Image ? data.attributes.Image : "Project Images",
     tags: [],
   });
-  return {};
 }
 export default function RootLayout({
   children,

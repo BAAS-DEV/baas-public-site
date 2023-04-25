@@ -316,7 +316,8 @@ export default function Industries({
           <div className="hero-content text-center">
             <div className="max-w-md">
               <h1 className="text-5xl font-bold">
-                Are you ready to build custom, just like these?
+                Are you ready to build{" "}
+                <span className="text-accent">custom?</span>
               </h1>
               <p className="py-6">
                 Take a look at some of the things we can do for you, and we are

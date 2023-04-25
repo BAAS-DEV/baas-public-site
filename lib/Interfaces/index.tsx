@@ -90,3 +90,21 @@ export interface Project {
     Slug?: string;
   };
 }
+
+export interface Service {
+  id: number;
+  attributes: {
+    name: string;
+    slug: string;
+    image: string;
+    Description: string;
+  };
+}
+
+export interface ServiceItems {
+  id: number;
+  attributes: {
+    Title: string;
+    Description: string;
+  };
+}
