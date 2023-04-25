@@ -29,3 +29,15 @@ export async function generateMetadata({
     tags: [],
   });
 }
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <div className="">{children}</div>
+    </>
+  );
+}
