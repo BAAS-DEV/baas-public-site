@@ -19,7 +19,7 @@ export default function Product(props: { item: Products }) {
   return (
     <>
       <>
-        <div className="w-full p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
+        <div className="w-full p-4 bg-white shadow-lg rounded-2xl ">
           {/* Things Can change here. */}
 
           <PriceItem data={props.item} selectedItem={selectedItem} />
