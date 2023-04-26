@@ -2,7 +2,7 @@ import { PricingEntity } from "../../Interfaces";
 
 export default function Details(props: { item: PricingEntity }) {
   return (
-    <ul className="w-full mt-6 mb-6 text-sm text-black dark:text-white">
+    <ul className="w-full mt-6 mb-6 text-sm text-black ">
       <>
         {props.item.Bonuses?.map((bonus, i) => (
           <>
