@@ -95,7 +95,7 @@ export default function PricePage({
             alt="Shoes"
           />
         </div>
-        <div className="col-span-2 lg:col-span-1 px-4 my-auto">
+        <div className="col-span-2 lg:col-span-1 text-center sm:text-center md:text-left px-4 my-auto">
           <h1 className="text-4xl font-bold">
             {priceCategory?.attributes.Name}
           </h1>
