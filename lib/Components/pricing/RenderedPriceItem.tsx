@@ -6,13 +6,13 @@ export default function PriceItem(props: {
 }) {
   return (
     <>
-      <p className="text-3xl font-bold text-info dark:text-white">
+      <p className="text-3xl font-bold text-info ">
         {props.data.attributes.Title}
       </p>
-      <p className="mb-4 mt-2 text-sm text-gray-700 dark:text-gray-300">
+      <p className="mb-4 mt-2 text-sm text-gray-700 ">
         {props.data.attributes.Description}
       </p>
-      <p className="text-2xl mb-0 font-bold text-black dark:text-white">
+      <p className="text-2xl mb-0 font-bold text-black ">
         {props.selectedItem?.BasePrice ? (
           props.selectedItem.BasePrice == 1 ? (
             ""
@@ -23,7 +23,7 @@ export default function PriceItem(props: {
           "Contact For Pricing"
         )}
       </p>
-      <p className="mb-4 text-sm text-gray-500 dark:text-gray-300">
+      <p className="mb-4 text-sm text-gray-500 ">
         <>{props.selectedItem?.MeasurementUnit}</>
       </p>
       <span className="block w-full h-1 my-2 bg-gray-100 rounded-lg"></span>
