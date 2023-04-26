@@ -127,7 +127,7 @@ export default function ServicesListPage({
 
       <div className="mx-auto w-full container py-4 px-2">
         <h3 className="text-3xl font-bold mb-4">Example Services:</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-2">
           {data.map((item, i) => (
             <>
               <div className="w-full p-4 bg-white rounded-xl">

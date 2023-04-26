@@ -23,13 +23,13 @@ export default function ContactUs() {
           <div className="max-w-lg">
             <h1 className="mb-5 text-5xl font-bold text-white">
               Supercharge your success with our team -{" "}
-              <span className="text-info">Contact us now!</span>
+              <span className="text-accent">Contact us now</span>!
             </h1>
             <p className="mb-5">
               From strategy to implementation, we&#39;ve got you covered.
               Contact us now and let&#39;s make something great together.
             </p>
-            <button className="btn btn-accent text-xl">
+            <button className="btn btn-primary text-xl">
               <Link href={"/contact"}>Get Started</Link>
             </button>
           </div>
