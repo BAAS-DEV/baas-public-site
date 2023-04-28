@@ -73,7 +73,6 @@ export default function Industries({
           params.studySlug
       )
       .then((res) => {
-        console.log(res.data);
         setPageLocalState(res.data.data);
         // setAllCategories(res.data.data);
         // setCategoriesToAllSelected(res.data.data);
@@ -85,7 +84,6 @@ export default function Industries({
     let res = await baasAxios
       .get("/systems?filters[Slug][$eq]=" + params.studySlug)
       .then((res) => {
-        console.log("data4", res.data.data[0]);
         // setAllCategories(res.data.data);
         // setCategoriesToAllSelected(res.data.data);
         return res.data.data[0];
@@ -113,13 +111,13 @@ export default function Industries({
                 alt="Shoes"
               />
             </div>
-            <div className="col-span-2 lg:col-span-1 px-4 my-auto">
+            <div className="col-span-2 lg:col-span-1 md:text-left text-center pt-4 my-auto">
               <h1 className="text-2xl font-semibold">
                 {project?.attributes.Title}
               </h1>
 
               <SLideInFromRightWhenViewed animation="easeInOut">
-                <p className="py-6 text-lg font-thin ">
+                <p className="py-2 text-lg font-thin ">
                   {project?.attributes.Description}
                 </p>
                 {/* <button className="btn btn-primary">Get Started</button> */}
@@ -143,7 +141,7 @@ export default function Industries({
               ))}
               {/* <div className="hero-overlay bg-opacity-60"></div> */}
               <div className=" w-full text-center text-primary">
-                <div className="grid grid-cols-2 w-full  ">
+                <div className="grid grid-cols-2 w-full gap-2 ">
                   {i % 2 === 0 ? (
                     <>
                       <div className="col-span-2 sm:col-span-2 md:col-span-1">
@@ -185,9 +183,11 @@ export default function Industries({
                                       layout="fill" // required
                                       // objectFit="cover"
                                       style={{
-                                        objectFit: "contain",
-                                        paddingTop: 36,
-                                        paddingBottom: 36,
+                                        objectFit: "fill",
+                                        paddingTop: 16,
+                                        paddingBottom: 16,
+                                        paddingLeft: 8,
+                                        paddingRight: 8,
                                       }} // change to suit your needs
                                       // className="rounded-xl w-full max-w-md"
                                     />
@@ -289,9 +289,11 @@ export default function Industries({
                                     layout="fill" // required
                                     // objectFit="cover"
                                     style={{
-                                      objectFit: "contain",
-                                      paddingRight: 16,
-                                      paddingLeft: 16,
+                                      objectFit: "fill",
+                                      paddingTop: 16,
+                                      paddingBottom: 16,
+                                      paddingLeft: 8,
+                                      paddingRight: 8,
                                     }} // change to suit your needs
                                     // className="rounded-xl w-full max-w-md"
                                   />
