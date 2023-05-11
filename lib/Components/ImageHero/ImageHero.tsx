@@ -33,7 +33,7 @@ export default function ImageHero() {
         <div className="mr-4 w-full text-center mt-48 px-4 sm:text-left">
           <h1 className="mb-6 text-3xl font-bold leading-tight md:text-4xl">
             We&#39;ve got{" "}
-            <span className="text-success">tons of experince!</span>
+            <span className="text-success">tons of experience!</span>
           </h1>
           <p className="mb-2 leading-relaxed text-slate-700 dark:text-slate-400">
             We have collected some examples of projects produced by our team.
